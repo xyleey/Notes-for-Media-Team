@@ -1,0 +1,182 @@
+Ubuntu for Windows10 - Linux command lines （RGB 32 60 69）
+
+Guidance: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices
+
+Tip: Return to the default directory: cd ~
+     Default folder for Ubuntu in Win10 in my case: 
+	         C:\Users\Yesung\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\Yesung
+	 history | more
+
+1. Install Ubuntu as the windows subsystem for linux
+   https://docs.microsoft.com/en-us/windows/wsl/install-win10 Online Guidance 
+   Only the Ubuntu need to be downloaded from app store in Windows10
+   
+2. Install tools
+
+  - ffmpeg -> use jonathonf/ffmpeg-3.
+
+    $ sudo add-apt-repository ppa:jonathonf/ffmpeg-3
+    $ sudo apt-get update
+    $ sudo apt-get install ffmpeg
+	* $ ffmpeg -version
+
+    # In case of `add-apt-repository: command not found':
+
+    $ sudo apt install software-properties-common
+     
+  - Aria2
+    $ sudo apt install aria2
+	$ aria2c --version
+    Usage is same as in windows
+	
+  - audio2video
+    $ sudo add-apt-repository ppa:fanaticscripter/multimedia
+    $ sudo apt-get update
+    $ sudo apt install multimedia-scripts
+    $ audio2video -h
+	#https://launchpad.net/~fanaticscripter/+archive/ubuntu/multimedia
+	
+  - Pocket48live
+    $ wget https://gist.githubusercontent.com/snh487sensesakira/d62a1316abc91816babf696e3c2d8f59/raw/9c738b418aea7820ee4be6ae41d96e5d7e53f5a1/Pocket48Live
+	$ sudo apt update && sudo apt install -y jq
+	$ chmod +x Pocket48Live
+	Usage: *   $ ./Pocket48Live -r -m 赵韩倩 -L all 
+	           -> search out all video record URLs for one member
+			   
+	       **  $ ./Pocket48Live -r -m 赵韩倩 -L all | grep -Po 'https?://[^"]*' >> 赵韩倩口袋录播.txt
+		       -> search out all URLs and convert them into a list of .txt	
+		   **  $ mkdir /mnt/d/赵韩倩 && mv 赵韩倩口袋录播.txt /mnt/d/赵韩倩 && cd /mnt/d/赵韩倩
+		       -> create a target folder in target directory, move .txt from default folder to target folder and position to target folder
+		   **  $ ./Pocket48Live -r -m 赵韩倩 -L all | grep -Po 'https?://[^"]*' >> 赵韩倩口袋录播.txt && mkdir /mnt/d/赵韩倩 && mv 赵韩倩口袋录播.txt /mnt/d/赵韩倩 && cd /mnt/d/赵韩倩
+		       -> concat the two steps above together
+			
+		   *** $ wget --no-check-certificate -i 赵韩倩口袋录播.txt
+		       -> batch download all listed videos
+			   
+  or $ sudo apt update && sudo apt install -y jq
+     $ sudo curl -o /usr/local/bin/Pocket48Live https://gist.githubusercontent.com/snh487sensesakira/d62a1316abc91816babf696e3c2d8f59/raw/9c738b418aea7820ee4be6ae41d96e5d7e53f5a1/Pocket48Live
+     $ sudo chmod +x /usr/local/bin/Pocket48Live
+     Usage: replace all "./Pocket48Live" with "Pocket48Live" because now you can use this .py in any directory as no need for "./"
+	 
+  - Python 3.6.0+ depends on Ubuntu release
+    sudo apt update
+    sudo apt install python3 python3-pip+
+	show python version: apt-cache show python3 | grep -i version
+	*** Maybe you should download python 3.6.4 by pyenv (see [Install Python 3.6+ in Ubuntu by pyenv])
+	
+  - caterpillar
+    pip3 install caterpillar-hls
+	#You need to add $HOME/.local/bin to your $PATH to use caterpillar
+	 $ echo "export PATH=$PATH:$HOME/.local/bin"
+		
+#Install Python 3.6+ in Ubuntu by pyenv
+
+Guide: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#zesty-1704-or-earlier-with-pyenv
+
+* $ sudo apt update 
+
+* Follow these instructions on the pyenv wiki to install prerequisite packages with apt;
+  $ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev
+  
+* You must have git:
+  $ sudo apt install -y git 
+  
+* Check out pyenv where you want it installed. (as default $HOME/.pyenv)
+  $ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+  
+* Define environment variable PYENV_ROOT
+  $ nano ~/.bashrc
+  # Append the following lines:
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+	
+    eval "$(pyenv init -)"
+  Ctrl+X to exit and press Y as "save & exit", [Enter]
+  
+* Restart your shell so the path changes take effect
+  $ exec bash -l 
+
+* See those lines you add at the bottom of 。bashrc (just to ensure the Appendix)
+  $ tail -5 .bashrc
+
+* List all the things you can install (optional)
+  $ pyenv install -l 
+  wait for several seconds to load the list
+  
+* Install python3.6.4
+  $ pyenv install 3.6.4
+  # You can find the latest stable Python release number at https://www.python.org/downloads/, which is not necessarily 3.6.4, apparently.
+  
+* Choose the Python Version
+  $ nano ~/.pyenv/version
+  Type two lines at start:
+  3.6.4
+  system  
+  
+* Restart the shell 
+  $ exec bash -l
+  
+* Now you can verify your Python version
+  $ python3 --version
+  
+ 
+#KVM48 https://github.com/SNH48Live/KVM48#readme
+
+Install  
+  $ pip install KVM48
+ 
+  $ kvm48 --help
+usage: kvm48 [-h] [-f FROM] [-t TO] [-s SPAN] [--dry] [--config CONFIG]
+             [--version] [--debug]
+
+KVM48, the Koudai48 VOD Manager.
+
+KVM48 downloads all streaming VODs of monitored members in a specified
+date range. Monitored members and other options are configured through
+the YAML configuration file
+
+  $HOME/.config/kvm48/config.yml
+
+or through a different configuration file specified with the --config
+option.
+
+The date range is determined as follows. All date and time are processed
+in China Standard Time (UTC+08:00). --from and --to are specified in the
+YYYY-MM-DD or MM-DD format.
+
+- If both --from and --to are specified, use those;
+
+- If --to is specified and --from is not, determine the date span
+  through --span and the `span' config option (the former takes
+  priority), then let the date range be `span' number of days
+  (inclusive) ending in the --to date.
+
+  For instance, if --to is 2018-02-18 and span is 7, then the date range
+  is 2018-02-12 to 2018-02-18.
+
+- If --from is specified and --to is not, then
+
+  - If --span is explicitly specified on the command line, let the date
+    range be `span' number of days starting from the --from date.
+
+  - Otherwise, let the date range be the --from date to today (in
+    UTC+08:00).
+
+- If neither --from nor --to is specified, use today (in UTC+08:00) as
+  the to date, and determine span in the same way as above.
+
+KVM48 uses aria2 as the downloader. Certain aria2c options, e.g.,
+--max-connection-per-server=16, are enforced within kvm48; most options
+should be configured directly in the aria2 config file.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FROM, --from FROM  starting day of date range
+  -t TO, --to TO        ending day of date range
+  -s SPAN, --span SPAN  number of days in date range
+  --dry                 print URL & filename combos but do not download
+  --config CONFIG       use this config file instead of the default
+  --version             show program's version number and exit
+  --debug
+
+NOTED ALL BY YESUNG
