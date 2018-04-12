@@ -1,0 +1,52 @@
+
+New tool and notes for downloading highest quality videos from bilibili, youku and iqiyi
+
+Source: https://github.com/iawia002/annie
+
+Installation:
+# Go Programming Language & Operating Environment
+1.Download from https://dl.google.com/go/go1.10.1.windows-amd64.msi & install as default in drive C:
+2.Create a new folder named "GoPath" in any directory (recommend under "..\Go")  e.g. C:\Go\GoPath
+3.Set environment variables: * System variables --> New... --> type in Variable name as "GOPATH" and Variable value as e.g. "C:\Go\GoPath"
+                             * Path --> New --> %GOPATH%\bin
+                             * Press OKs to save all settings above
+# Install annie from github
+Open cmd.exe --> run 'go get github.com/iawia002/annie' --> wait for compiling the program (it has no output)
+
+Usage: annie -h
+
+Typical examples
+1) Show all part information respectively from https://www.bilibili.com/video/av22009762/
+   annie -i -p https://www.bilibili.com/video/av22009762/ (if download, delete -i)
+
+ Site:      哔哩哔哩 bilibili.com
+ Title:     【SNH48】【轻声密语】一生所愿有几何，人生总有尴尬时，再忆红白泪笑曲，耳边呢喃最销魂 TeamSII 《第48区》公演(2018041) 前四首: 第48区+破茧+MUTE+Drop It
+ Type:      video
+ Streams:   # All available quality
+     [default]  -------------------
+     Quality:         高清 1080P
+     Size:            511.71 MiB (536568438 Bytes)
+     # download with: annie -f default "URL"
+     
+ Site:      哔哩哔哩 bilibili.com
+ Title:     【SNH48】【轻声密语】一生所愿有几何，人生总有尴尬时，再忆红白泪笑曲，耳边呢喃最销魂 TeamSII 《第48区》公演(2018041) MC1: 人生中怎么都一定要做的一件事是什么
+ Type:      video
+ Streams:   # All available quality
+     [default]  -------------------
+     Quality:         高清 1080P
+     Size:            1133.88 MiB (1188958387 Bytes)
+     # download with: annie -f default "URL"
+
+.etc
+2) Download 1080P60FPS video from https://www.bilibili.com/video/av21999387
+   annie -c cookies "https://www.bilibili.com/video/av21999387" 
+   
+3) Show video information from http://v.youku.com/v_show/id_XMzUwMTY0NDQ0MA==.html?spm=a2h0k.8191407._xbox_refresh.5~5!2~5~P~A&from=s1.8-4.999
+   annie -i "http://v.youku.com/v_show/id_XMzUwMTY0NDQ0MA==.html?spm=a2h0k.8191407._xbox_refresh.5~5!2~5~P~A&from=s1.8-4.999" (if download, delete -i and will choose 1080P as default)
+
+4) Show video information from http://www.iqiyi.com/v_19rrc1ef20.html?list=19rrlwp41e
+   annie -i "http://www.iqiyi.com/v_19rrc1ef20.html?list=19rrlwp41e" (if download, delete -i)
+   * this may access 1080P with required cookies but still has not tested yet.
+   
+Thanks to @iawia for sharing this useful tool, it helped instead of the previous one "lulu".
+Thanks to @loony175 for recommendation and offer a use guidance which plays as the foundation of my notes
