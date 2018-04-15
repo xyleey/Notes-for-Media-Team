@@ -49,7 +49,8 @@
   ffmpeg "file.ts" "file.flv" 本地转码
   
   视频切割
-  ffmpeg -ss 00:00:00 -i "filename.mp4" -c copy -t 01:48:18 "output.mp4" 第一个时间表示剪切起始位置，第二个时间表示持续时长
+  ffmpeg -ss 00:04:18 -t 00:04:34 -accurate_seek -i input -c copy -avoid_negative_ts 1 output
+  第一个时间表示剪切起始位置，第二个时间表示output的时长（注意不是剪切结束位置）
 
   视频无损合并
   https://trac.ffmpeg.org/wiki/Concatenate网站里的'Concat demuxer'部分.
