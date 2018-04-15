@@ -48,9 +48,10 @@
   转码（不适用于口袋直播的转码）
   ffmpeg "file.ts" "file.flv" 本地转码
   
-  视频切割
-  ffmpeg -ss 00:04:18 -t 00:04:34 -accurate_seek -i input -c copy -avoid_negative_ts 1 output
-  第一个时间表示剪切起始位置，第二个时间表示output的时长（注意不是剪切结束位置）
+  视频切割 (第一个时间表示剪切起始位置，第二个时间表示output的时长（注意不是剪切结束位置）)
+  基础切割：ffmpeg -ss 01:31:29 -i input.mp4 -c copy -t 00:13:50 output.mp4
+  精准切割：ffmpeg -ss 00:04:18 -t 00:04:34 -accurate_seek -i input -c copy -avoid_negative_ts 1 output
+           Ref: http://trac.ffmpeg.org/wiki/Seeking
 
   视频无损合并
   https://trac.ffmpeg.org/wiki/Concatenate网站里的'Concat demuxer'部分.
