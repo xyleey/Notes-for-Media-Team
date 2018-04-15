@@ -36,28 +36,6 @@ Tip: Return to the default directory: cd ~
     $ audio2video -h
 	#https://launchpad.net/~fanaticscripter/+archive/ubuntu/multimedia
 	
-  - Pocket48live
-    $ wget https://gist.githubusercontent.com/snh487sensesakira/d62a1316abc91816babf696e3c2d8f59/raw/9c738b418aea7820ee4be6ae41d96e5d7e53f5a1/Pocket48Live
-	$ sudo apt update && sudo apt install -y jq
-	$ chmod +x Pocket48Live
-	Usage: *   $ ./Pocket48Live -r -m 赵韩倩 -L all 
-	           -> search out all video record URLs for one member
-			   
-	       **  $ ./Pocket48Live -r -m 赵韩倩 -L all | grep -Po 'https?://[^"]*' >> 赵韩倩口袋录播.txt
-		       -> search out all URLs and convert them into a list of .txt	
-		   **  $ mkdir /mnt/d/赵韩倩 && mv 赵韩倩口袋录播.txt /mnt/d/赵韩倩 && cd /mnt/d/赵韩倩
-		       -> create a target folder in target directory, move .txt from default folder to target folder and position to target folder
-		   **  $ ./Pocket48Live -r -m 赵韩倩 -L all | grep -Po 'https?://[^"]*' >> 赵韩倩口袋录播.txt && mkdir /mnt/d/赵韩倩 && mv 赵韩倩口袋录播.txt /mnt/d/赵韩倩 && cd /mnt/d/赵韩倩
-		       -> concat the two steps above together
-			
-		   *** $ wget --no-check-certificate -i 赵韩倩口袋录播.txt
-		       -> batch download all listed videos
-			   
-  or $ sudo apt update && sudo apt install -y jq
-     $ sudo curl -o /usr/local/bin/Pocket48Live https://gist.githubusercontent.com/snh487sensesakira/d62a1316abc91816babf696e3c2d8f59/raw/9c738b418aea7820ee4be6ae41d96e5d7e53f5a1/Pocket48Live
-     $ sudo chmod +x /usr/local/bin/Pocket48Live
-     Usage: replace all "./Pocket48Live" with "Pocket48Live" because now you can use this .py in any directory as no need for "./"
-	 
   - Python 3.6.0+ depends on Ubuntu release
     sudo apt update
     sudo apt install python3 python3-pip+
