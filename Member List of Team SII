@@ -2,7 +2,7 @@
 As at 3 February 2018 array in alphabetical order. 
 Total 26 members are on the payroll in Team SII.
 
-Source: (curl -s http://h5.snh48.com/resource/jsonp/members.php?gid=10 | jq '.rows[] | select(.tname == "SII") | select(.status == "99")' | jq '.sname' | sed 's/"//g' && echo -e "成珏\n冯晓菲\n潘燕琦\n温晶婕") | sort -u
+Source: (curl -s http://h5.snh48.com/resource/jsonp/members.php?gid=10 | jq -r '.rows[] | select(.tname == "SII") | select(.status == "99") | .sname' && echo -e "成珏\n冯晓菲\n潘燕琦\n温晶婕") | sort -u
 
 ——Format by rows
   陈观慧, 陈思, 成珏, 戴萌, 冯晓菲, 蒋芸, 孔肖吟, 李宇琪, 刘增艳, 吕一, 莫 寒, 潘燕琦, 钱蓓婷, 邱欣怡, 邵雪聪, 孙芮, 温晶婕, 吴哲晗, 徐晨辰, 许佳琪, 徐伊人, 徐子轩, 袁丹妮, 袁雨桢, 张语格, 赵晔
