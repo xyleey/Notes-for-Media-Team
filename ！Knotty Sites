@@ -11,7 +11,7 @@ Installation:
                              * Path --> New --> %GOPATH%\bin
                              * Press OKs to save all settings above
 # Install annie from github
-Open cmd.exe --> run 'go get github.com/iawia002/annie' --> wait for compiling the program (it has no output)
+Open cmd.exe --> run 'go get github.com/iawia002/annie' --> wait for compiling the program (it has no output) --> Done
 
 Usage: annie -h
 
