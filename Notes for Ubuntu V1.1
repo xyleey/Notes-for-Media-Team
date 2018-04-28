@@ -28,24 +28,14 @@ Tip: Return to the default directory: cd ~
 	$ aria2c --version
     Usage is same as in windows
 	
-  - audio2video
-    $ sudo add-apt-repository ppa:fanaticscripter/multimedia
-    $ sudo apt-get update
-    $ sudo apt install multimedia-scripts
-    $ audio2video -h
-	#https://launchpad.net/~fanaticscripter/+archive/ubuntu/multimedia
-	
   - Python 3.6.0+ depends on Ubuntu release
     $ sudo apt update
     $ sudo apt install python3 python3-pip+
 	show python version: apt-cache show python3 | grep -i version
 	*** Maybe you should download python 3.6.4 by pyenv (see [Install Python 3.6+ in Ubuntu by pyenv])
 	
-  - caterpillar
-    $ pip3 install caterpillar-hls
-	#You need to add $HOME/.local/bin to your $PATH to use caterpillar
-	 $ echo "export PATH=$PATH:$HOME/.local/bin"
-		
+------------------------------------------------------------------------------------------------------------------------------------
+
 #Install Python 3.6+ in Ubuntu by pyenv
 
 Guide: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#zesty-1704-or-earlier-with-pyenv
@@ -96,7 +86,22 @@ Guide: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novice
 * Now you can verify your Python version
   $ python3 --version
   
- 
+------------------------------------------------------------------------------------------------------------------------------------
+
+  - audio2video
+    $ sudo add-apt-repository ppa:fanaticscripter/multimedia
+    $ sudo apt-get update
+    $ sudo apt install multimedia-scripts
+    $ audio2video -h
+	#https://launchpad.net/~fanaticscripter/+archive/ubuntu/multimedia
+	
+  - caterpillar
+    $ pip3 install caterpillar-hls
+	#You need to add $HOME/.local/bin to your $PATH to use caterpillar
+	 $ echo "export PATH=$PATH:$HOME/.local/bin"
+	 
+------------------------------------------------------------------------------------------------------------------------------------
+	 
 #KVM48 https://github.com/SNH48Live/KVM48#readme
 
 Install  
