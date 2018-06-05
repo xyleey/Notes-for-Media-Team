@@ -146,50 +146,64 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   ```console
   Collecting pipdeptree
   Downloading https://files.pythonhosted.org/packages/f2/25/cf80fcf4885ab46619f0b7922c1a648c5f1c4186320dc624754fe0130c7a/pipdeptree-0.12.1-py3-none-any.whl
-Collecting pip>=6.0.0 (from pipdeptree)
+  Collecting pip>=6.0.0 (from pipdeptree)
   Downloading https://files.pythonhosted.org/packages/0f/74/ecd13431bcc456ed390b44c8a6e917c1820365cbebcb6a8974d1cd045ab4/pip-10.0.1-py2.py3-none-any.whl (1.3MB)
     100% |████████████████████████████████| 1.3MB 743kB/s
-Installing collected packages: pip, pipdeptree
-  Found existing installation: pip 9.0.3
-    Uninstalling pip-9.0.3:
-      Successfully uninstalled pip-9.0.3
-Exception:
-Traceback (most recent call last):
-  File "c:\python36\lib\shutil.py", line 387, in _rmtree_unsafe
-    os.unlink(fullname)
-PermissionError: [WinError 5] Access is denied: 'C:\\Users\\Yesung\\AppData\\Local\\Temp\\pip-_3qewcai-uninstall\\python36\\scripts\\pip.exe'
+  Installing collected packages: pip, pipdeptree
+    Found existing installation: pip 9.0.3
+      Uninstalling pip-9.0.3:
+        Successfully uninstalled pip-9.0.3
+  Exception:
+  Traceback (most recent call last):
+    File "c:\python36\lib\shutil.py", line 387, in _rmtree_unsafe 
+     os.unlink(fullname)
+  PermissionError: [WinError 5] Access is denied: 'C:\\Users\\Yesung\\AppData\\Local\\Temp\\pip-_3qewcai-uninstall\\python36\\scripts\\pip.exe'
 
-During handling of the above exception, another exception occurred:
+  During handling of the above exception, another exception occurred:
 
-Traceback (most recent call last):
-  File "c:\python36\lib\site-packages\pip\basecommand.py", line 215, in main
-  File "c:\python36\lib\site-packages\pip\commands\install.py", line 342, in run
-  File "c:\python36\lib\site-packages\pip\req\req_set.py", line 795, in install
-  File "c:\python36\lib\site-packages\pip\req\req_install.py", line 767, in commit_uninstall
-  File "c:\python36\lib\site-packages\pip\req\req_uninstall.py", line 142, in commit
-  File "c:\python36\lib\site-packages\pip\_vendor\retrying.py", line 49, in wrapped_f
-    return Retrying(*dargs, **dkw).call(f, *args, **kw)
-  File "c:\python36\lib\site-packages\pip\_vendor\retrying.py", line 212, in call
-    raise attempt.get()
-  File "c:\python36\lib\site-packages\pip\_vendor\retrying.py", line 247, in get
-    six.reraise(self.value[0], self.value[1], self.value[2])
-  File "c:\python36\lib\site-packages\pip\_vendor\six.py", line 686, in reraise
-  File "c:\python36\lib\site-packages\pip\_vendor\retrying.py", line 200, in call
-    attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
-  File "c:\python36\lib\site-packages\pip\utils\__init__.py", line 102, in rmtree
-  File "c:\python36\lib\shutil.py", line 494, in rmtree
-    return _rmtree_unsafe(path, onerror)
-  File "c:\python36\lib\shutil.py", line 384, in _rmtree_unsafe
-    _rmtree_unsafe(fullname, onerror)
-  File "c:\python36\lib\shutil.py", line 384, in _rmtree_unsafe
-    _rmtree_unsafe(fullname, onerror)
-  File "c:\python36\lib\shutil.py", line 389, in _rmtree_unsafe
-    onerror(os.unlink, fullname, sys.exc_info())
-  File "c:\python36\lib\site-packages\pip\utils\__init__.py", line 114, in rmtree_errorhandler
-PermissionError: [WinError 5] Access is denied: 'C:\\Users\\Yesung\\AppData\\Local\\Temp\\pip-_3qewcai-uninstall\\python36\\scripts\\pip.exe'
+  Traceback (most recent call last):
+    File "c:\python36\lib\site-packages\pip\basecommand.py", line 215, in main
+    File "c:\python36\lib\site-packages\pip\commands\install.py", line 342, in run
+    File "c:\python36\lib\site-packages\pip\req\req_set.py", line 795, in install
+    File "c:\python36\lib\site-packages\pip\req\req_install.py", line 767, in commit_uninstall
+    File "c:\python36\lib\site-packages\pip\req\req_uninstall.py", line 142, in commit
+    File "c:\python36\lib\site-packages\pip\_vendor\retrying.py", line 49, in wrapped_f
+      return Retrying(*dargs, **dkw).call(f, *args, **kw)
+    File "c:\python36\lib\site-packages\pip\_vendor\retrying.py", line 212, in call
+      raise attempt.get()
+    File "c:\python36\lib\site-packages\pip\_vendor\retrying.py", line 247, in get
+      six.reraise(self.value[0], self.value[1], self.value[2])
+    File "c:\python36\lib\site-packages\pip\_vendor\six.py", line 686, in reraise
+    File "c:\python36\lib\site-packages\pip\_vendor\retrying.py", line 200, in call
+      attempt = Attempt(fn(*args, **kwargs), attempt_number, False)
+    File "c:\python36\lib\site-packages\pip\utils\__init__.py", line 102, in rmtree
+    File "c:\python36\lib\shutil.py", line 494, in rmtree
+      return _rmtree_unsafe(path, onerror)
+    File "c:\python36\lib\shutil.py", line 384, in _rmtree_unsafe
+      _rmtree_unsafe(fullname, onerror)
+    File "c:\python36\lib\shutil.py", line 384, in _rmtree_unsafe
+      _rmtree_unsafe(fullname, onerror)
+    File "c:\python36\lib\shutil.py", line 389, in _rmtree_unsafe
+      onerror(os.unlink, fullname, sys.exc_info())
+    File "c:\python36\lib\site-packages\pip\utils\__init__.py", line 114, in rmtree_errorhandler
+  PermissionError: [WinError 5] Access is denied: 'C:\\Users\\Yesung\\AppData\\Local\\Temp\\pip-_3qewcai-  uninstall\\python36\\scripts\\pip.exe'
   ```
-  
-
+This is because of the incompatible version of urllib3.
+- Run `pip install -U pipdeptree && pipdeptree -p requests` as administrator. We can see the warning
+  ```console
+  Warning!!! Possibly conflicting dependencies found:
+  * requests==2.18.4
+   - urllib3 [required: >=1.21.1,<1.23, installed: 1.23]
+  ------------------------------------------------------------------------
+  requests==2.18.4
+    - certifi [required: >=2017.4.17, installed: 2018.4.16]
+    - chardet [required: >=3.0.2,<3.1.0, installed: 3.0.4]
+    - idna [required: <2.7,>=2.5, installed: 2.6]
+    - urllib3 [required: >=1.21.1,<1.23, installed: 1.23]
+  ```
+That's it ! We must have, the urllib3 1.22 for instance.
+- Run `pip uninstall -y urllib3 && pip install "urllib3==1.22"`
+- Done ! Now you could try `caterpillar -h` to see the options
 
 
 <p align="center">
