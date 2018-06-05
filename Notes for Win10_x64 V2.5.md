@@ -43,7 +43,7 @@ Install `choco install aria2` or download the release
   
 Upgrade `choco upgrade aria2` or download the new release
 
-Version `aria2c -v`
+Version `aria2c -v` or `aria2c --version`
 
 Usage   `aria2c -h` or see examples on https://aria2.github.io/
 
