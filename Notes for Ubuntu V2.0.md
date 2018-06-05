@@ -12,7 +12,7 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
   - [ffmpeg](#ffmpeg)
   - [Python](#python)
   - [caterpillar-hls](#caterpillar-hls)
-  - [kvm48](#kvm48)
+  - [KVM48](#kvm48)
 - [Linux command tips](#linux-command-tips) 
  
 ## Ubuntu for Windows 10
@@ -135,9 +135,20 @@ $ pip3 install caterpillar-hls
   
 $ echo "export PATH=$PATH:$HOME/.local/bin"
 ```	 
-------------------------------------------------------------------------------------------------------------------------------------
-	 
-#KVM48 https://github.com/SNH48Live/KVM48#readme
+
+### kvm48
+[KVM48](https://github.com/SNH48Live/KVM48), the Koudai48 VOD Manager. It is capable of downloading all streaming VODs of a set of monitored members in a specified date range. It collaborates with aria2 and caterpillar
+
+Usage `kvm48 -h`
+
+On windows, you can find the path of `config.yml` printed in the output of `kvm48 -h`. 
+
+Edit this configuration file first before you use it.
+
+- New process mode for url.m3u8 (20180605 update)
+  This update allows kvm48 to distinguish all `url.m3u8`. It picks them up and prints them into `m3u8.txt` as it consists to caterpillar's batch mode requirements. Then we run `caterpillar m3u8.txt` to download those VODs concurrently.
+
+
 
 Install  
   $ pip install KVM48
@@ -197,17 +208,6 @@ optional arguments:
   --debug
 
 
-### kvm48
-[KVM48](https://github.com/SNH48Live/KVM48), the Koudai48 VOD Manager. It is capable of downloading all streaming VODs of a set of monitored members in a specified date range. It collaborates with aria2 and caterpillar
-
-Usage `kvm48 -h`
-
-On windows, you can find the path of `config.yml` printed in the output of `kvm48 -h`. 
-
-Edit this configuration file first before you use it.
-
-- New process mode for url.m3u8 (20180605 update)
-  This update allows kvm48 to distinguish all `url.m3u8`. It picks them up and prints them into `m3u8.txt` as it consists to caterpillar's batch mode requirements. Then we run `caterpillar m3u8.txt` to download those VODs concurrently.
 
 ## Linux command tips 
 Tip: Return to the default directory: cd ~
