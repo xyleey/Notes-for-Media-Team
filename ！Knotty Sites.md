@@ -3,8 +3,10 @@ New tool and notes for downloading highest quality videos from bilibili, youku a
 
 Source: https://github.com/iawia002/annie
 
-Installation:
-# Go Programming Language & Operating Environment
+## Installation:
+
+- Go Programming Language & Operating Environment
+
 1.Download from https://dl.google.com/go/go1.10.1.windows-amd64.msi & install as default in drive C:
 2.Create a new folder named "GoPath" in any directory (recommend under "..\Go")  e.g. C:\Go\GoPath
 3.Set environment variables: * System variables --> New... --> type in Variable name as "GOPATH" and Variable value as e.g. "C:\Go\GoPath"
