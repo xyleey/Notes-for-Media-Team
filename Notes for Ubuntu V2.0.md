@@ -59,7 +59,7 @@ $ sudo apt install software-properties-common
   $ sudo apt install python3 python3-pip+
   $ apt-cache show python3 | grep -i version
   ```	
-*** Maybe you should download python 3.6.4 by pyenv (see [Install Python 3.6+ in Ubuntu by pyenv])
+  *** Maybe you should download python 3.6.4 by pyenv (see [Install Python 3.6+ in Ubuntu by pyenv])
 ------------------------------------------------------------------------------------------------------------------------------------
 
 #Install Python 3.6+ in Ubuntu by pyenv
