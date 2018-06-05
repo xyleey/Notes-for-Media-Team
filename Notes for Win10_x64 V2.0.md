@@ -1,7 +1,7 @@
 ## Index
 - [Operation environment](#operation environment)
 - [General usage](#general usage)
-  - ['Y's](#'y's)
+  - ['Y's](#ys)
   - []()
   - []()
 - []()
