@@ -56,11 +56,10 @@
   `you-get` 可用于下载斗鱼、b站、优酷等网站的视频，同时具有查看当前视频信息和寻找源地址的功能
  
  Usage: 
- 
-  `you-get url`    直接下载当前网页中的内容，适用斗鱼直播录制
-  `you-get -l url` 同时下载b站多p视频
-  `you-get -i url` 查看当前网页中可下载的视频信息
-  `you-get -u url` 查找当前页面视频的源地址，适用b站直播录制 
+   - `you-get url`    直接下载当前网页中的内容，适用斗鱼直播录制
+   - `you-get -l url` 同时下载b站多p视频
+   - `you-get -i url` 查看当前网页中可下载的视频信息
+   - `you-get -u url` 查找当前页面视频的源地址，适用b站直播录制 
          
   * `lulu` 实质为you-get的分支，下载b站视频能力比you-get稳定一些
   usage: lulu weburl
