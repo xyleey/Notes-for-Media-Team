@@ -17,10 +17,11 @@ Source: https://github.com/iawia002/annie
   
 ## Install annie from github
 
-```console
+```
 Open cmd.exe
-> go get github.com/iawia002/annie' 
+$ go get github.com/iawia002/annie' 
 wait for compiling the program (it has no output) --> Done
+```
 
 Usage: annie -h
 Upgrade: go get -u github.com/iawia002/annie
