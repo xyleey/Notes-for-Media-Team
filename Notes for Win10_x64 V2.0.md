@@ -1,9 +1,10 @@
+`console
 ## Index
 - [Operation environment](#operation environment)
 - [General usage](#general usage)
   - ['Y's](#ys)
-  - []()
-  - []()
+  - [ffmpeg](#ffmpeg)
+  - [caterpillar](#caterpillar)
 - []()
 - []()
 - []()
@@ -59,7 +60,7 @@
   usage: ykdl -i url, 只显示视频信息而不进行下载
          ykdl -l url, 将所给的视频url作为播放列表进行下载
 
-2.ffmpeg
+### ffmpeg
 
   下载和录制 (下述url均为actual url即视频源地址)
   ffmpeg -i url -c copy output.ts 下载视频或直播为视频文件，其文件名为output，封装格式为.ts
@@ -88,7 +89,7 @@
   e.g.在狼人杀录屏文件1.mp4(886x1920)中贴近左边界加入一个在[发送弹幕按钮]上方适当位置的水印2.png(300x100)，适用时长为全部(默认)
   ffmpeg -i "1.mp4" -i "2.png" -filter_complex "overlay=10:1635" pix8.mp4
 
-3.caterpillar 
+### caterpillar 
   已上传到PyPI上，可以直接 pip install caterpillar-hls (https://github.com/zmwangx/caterpillar#for-end-users)
   完全可以用于所有M3U8下载（且显然比FFmpeg/you-get等单线程的快），并不限于出错时。
   对工作组而言主要用于处理口袋录播当中例如http://live.us.sinaimg.cn/000GfC07jx07gRLr24cn070d010007sP0k01.m3u8的hls协议下m3u8文件下载出错的情况。
@@ -100,4 +101,5 @@
          *** -m {concat_demuxer,concat_protocol,0,1} 不同的concat method，默认使用concat_demuxer，或-m 1换成concat_protocol
                                                      其作用是：口袋录播文件->默认即可
                                                                公演录播文件->有时以默认模式下载会出现例如"Application provided duration: 7980637472 / timestamp: 7994129672 is out of range for mov/mp4 format"的错误，而使用concat_protocol就不会出现这样的问题
+
 NOTED ALL BY YESUNG
