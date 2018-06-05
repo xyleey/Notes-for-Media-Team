@@ -1,4 +1,19 @@
-Ubuntu for Windows10 - Linux command lines （RGB 32 60 69）
+<h1 align="center"><img src="https://github.com/TeamSII/TeamSII.github.io/blob/master/image/NOTES%20copyright.png" width="500" height="400" alt="YESUNG"></h1>
+
+These notes are positively tested as available on the platform of Ubuntu, a subsystem simulates linux environment.
+
+Please keep your CLU consistent with the version mentioned in the notes or, apply it in your special demand.
+
+## Index
+- [Ubuntu for Windows10](#operation-environment)
+- [Tools](#tools)
+  - [aria2](#aria2)
+  - ['Y's](#ys)
+  - [ffmpeg](#ffmpeg)
+  - [caterpillar-hls](#caterpillar-hls)
+  - [kvm48](#kvm48)
+  
+  Ubuntu for Windows10 - Linux command lines （RGB 32 60 69）
 
 Guidance: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices
 
@@ -154,4 +169,10 @@ optional arguments:
   --version             show program's version number and exit
   --debug
 
-NOTED ALL BY YESUNG
+<p align="center">
+------------------------------------------------------------------ End ------------------------------------------------------------------
+</p>
+<p align="left">
+*Notes for Win10_x64 V2.5.md Update 20180605
+</p>  
+   
