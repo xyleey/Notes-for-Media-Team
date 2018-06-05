@@ -1,4 +1,4 @@
-```console
+
 ## Recommanded installation
 
     $ sudo add-apt-repository ppa:fanaticscripter/multimedia
@@ -7,13 +7,15 @@
     $ audio2video -h
     
 	# https://launchpad.net/~fanaticscripter/+archive/ubuntu/multimedia
-  # https://github.com/fanaticscripter/multimedia-scripts
+        # https://github.com/fanaticscripter/multimedia-scripts
   
-  Update 20180605:
+## Update 20180605
+
   * Add multimedia-scripts bionic 
  
 ## Possible case
 
+```console
 $ sudo add-apt-repository ppa:fanaticscripter/multimedia
  Small utilities for multimedia processing.
  More info: https://launchpad.net/~fanaticscripter/+archive/ubuntu/multimedia
