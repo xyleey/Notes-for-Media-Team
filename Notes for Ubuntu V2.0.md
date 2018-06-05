@@ -86,7 +86,7 @@ $ nano ~/.bashrc
   Ctrl+X to exit and press Y as "save & exit", [Enter]
   
 Restart your shell so the path changes take effect
-[$ exec bash -l]
+$ exec bash -l
 
 See those lines you add at the bottom of .bashrc (just to ensure the Appendix)
 $ tail -5 .bashrc
