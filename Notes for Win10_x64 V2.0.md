@@ -1,6 +1,6 @@
 <h1 align="center"><img src="https://github.com/TeamSII/TeamSII.github.io/blob/master/image/NOTES%20copyright.png" width="500" height="400" alt="YESUNG"></h1>
 
-These notes are positively tested as available on the platform of Windows10(x64). They works in the system version of 1709 and 1803, either HOME or Pro,N or NT. 
+These notes are positively tested as available on the platform of Windows10(x64). They works in both system versions of 1709 and 1803, either HOME or Pro,N or NT. 
 
 Please keep your CLU consistent with the version mentioned in the notes or, apply it in your special demand.
 
@@ -25,19 +25,12 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
                             
   - `pip install –-upgrade xxx xxx xxx etc.` # 下载并更新xxx,xxx,xxx,等
                             
-4.[`ffmpeg`](http://ffmpeg.org/download.html): 从官网下载ffmpeg for windows后，配置path即可。  
-
-  检测是否安装成功及查看当前版本：`ffmpeg -version`
-  
 5.'Y's: `youtube-dl`, `you-get`(&`lulu`), `ykdl`是基于python的三个命令行下载工具
 
    安装与更新: `pip install –-upgrade youtube-dl you-get ykdl lulu`
    
    * 定期运行保证三件套都 up to date
    
-6.`caterpillar`:hls协议下的地址适用。特指类似于 http://live.us.sinaimg.cn/000GfC07jx07gRLr24cn070d010007sP0k01.m3u8 的口袋录播地址。
-
-  安装：使用pip下载：`pip install caterpillar-hls`详细信息见 https://github.com/zmwangx/caterpillar#for-end-users
 
 #可用[`chocolatey`](https://chocolatey.org/) 进行python/ffmpeg/aria2等的安装
 
@@ -73,6 +66,14 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
    - `ykdl -l url` 将所给的视频url作为播放列表进行下载
 
 ### ffmpeg
+ 
+  [`ffmpeg`](http://ffmpeg.org/download.html): 从官网下载ffmpeg for windows后，配置path即可。  
+  
+  Install `choco install ffmpeg` or configure the downloading package
+  
+  Upgrade `choco upgrade ffmpeg` or reconfigure the downloading package
+  
+  Version `ffmpeg -version`
 
   下载和录制 (下述url均为actual url即视频源地址)
   
@@ -118,19 +119,20 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
 
 ### caterpillar 
 
-  已上传到PyPI上，可以直接 `pip install caterpillar-hls` (https://github.com/zmwangx/caterpillar#for-end-users)
+  [`caterpillar-hls`](https://github.com/zmwangx/caterpillar) 适用于下载hls下的VODs, i.e.`url.m3u8`
+
+  Install `pip install --upgrade caterpillar-hls`
   
-  完全可以用于所有M3U8下载（且显然比FFmpeg/you-get等单线程的快），并不限于出错时。
+  In case of downloading Koudai 48 VODs, it may report `Error: Non-monotonous DTS in output stream ` while use ffmpeg alone.
   
-  对工作组而言主要用于处理口袋录播当中例如 http://live.us.sinaimg.cn/000GfC07jx07gRLr24cn070d010007sP0k01.m3u8 的hls协议下m3u8文件下载出错的情况。
-  ```
-  Error: Non-monotonous DTS in output stream 的黄色文字输出
-  可直接用caterpillar下载这样的m3u8文件，一旦出错会自动修复。
-  usage: caterpillar m3u8_url 以默认模式下载并修复(如有)该地址下的口袋录播文件，并且封装为.mp4且生成的文件可直接传b站 
-         *   -h 查看详细用法帮助
-         **  -j JOBS "JOBS"为数字，代表同时下载的进程数量。下载进度明显小于带宽时可适当增加同时下载进程数量以提高效率
-         *** -m {concat_demuxer,concat_protocol,0,1} 不同的concat method，默认使用concat_demuxer，或-m 1换成concat_protocol
-                                                     其作用是：口袋录播文件->默认即可
-                                                               公演录播文件->有时以默认模式下载会出现例如"Application provided duration: 7980637472 / timestamp: 7994129672 is out of range for mov/mp4 format"的错误，而使用concat_protocol就不会出现这样的问题
+  Caterpillar will be able to work out such errors in most of cases.
+  
+  Ultimate features
+  
+  ```console
+  - Concat method
+    - -m {concat_demuxer,concat_protocol,0,1} 不同的concat method，默认使用concat_demuxer，或-m 1切换concat_protocol
+      - 口袋录播文件 -> 默认即可
+      - 公演录播文件 -> 有时以默认模式下载会出现例如 "Application provided duration: 7980637472 / timestamp: 7994129672 is out of range for mov/mp4 format" 的错误，而使用concat_protocol就不会出现这样的问题
   ```
   
