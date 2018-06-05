@@ -99,30 +99,32 @@ Wait for several seconds to load the list
 
 Now we can use pyenv to install python
 ```console
-1. Install python3.6.4
+Install python3.6.4
 $ pyenv install 3.6.4
 # You can find the latest stable Python release number at https://www.python.org/downloads/, which is not necessarily 3.6.4, apparently.
   
-2. Choose the Python Version
+Choose the Python Version
 $ nano ~/.pyenv/version
 
-3. Type two lines at start:
+Type two lines at start:
    3.6.4
    system  
   
-4. Restart the shell 
+Restart the shell 
 $ exec bash -l
   
-5. Now you can verify your Python version
+Now you can verify your Python version
 $ python3 --version
+```
+
+### caterpillar-hls
+[`caterpillar-hls`](https://github.com/zmwangx/caterpillar) 适用于下载hls下的VODs, i.e.`url.m3u8`
+```console
+$ pip3 install caterpillar-hls
+  #You need to add $HOME/.local/bin to your $PATH to use caterpillar
   
-------------------------------------------------------------------------------------------------------------------------------------
-	
-- caterpillar
-  $ pip3 install caterpillar-hls
-    #You need to add $HOME/.local/bin to your $PATH to use caterpillar
-  $ echo "export PATH=$PATH:$HOME/.local/bin"
-	 
+$ echo "export PATH=$PATH:$HOME/.local/bin"
+```	 
 ------------------------------------------------------------------------------------------------------------------------------------
 	 
 #KVM48 https://github.com/SNH48Live/KVM48#readme
