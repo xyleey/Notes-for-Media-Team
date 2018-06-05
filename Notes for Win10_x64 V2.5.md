@@ -224,7 +224,8 @@ That's it ! We must have, the urllib3 1.22 for instance.
 ### KVM48
 [KVM48](https://github.com/SNH48Live/KVM48), the Koudai48 VOD Manager. It is capable of downloading all streaming VODs of a set of monitored members in a specified date range. It collaborates with aria2 and caterpillar
 
-Usage `kvm48 -h`
+Install `pip install KVM48`
+Usage   `kvm48 -h`
 
 On windows, you can find the path of `config.yml` printed in the output of `kvm48 -h`. 
 
