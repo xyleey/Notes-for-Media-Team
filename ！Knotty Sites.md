@@ -10,14 +10,17 @@ Source: https://github.com/iawia002/annie
   - Download from https://dl.google.com/go/go1.10.1.windows-amd64.msi & install as default in drive C:
   - Create a new folder named "GoPath" in any directory (recommend under "..\Go")  e.g. C:\Go\GoPath
   - Set environment variables: 
-    - System variables --> New... --> type in Variable name as "GOPATH" and Variable value as e.g. "C:\Go\GoPath"
-    - Path --> New --> %GOPATH%\bin
-    - Press OKs to save all settings above
+    * System variables --> New... --> type in Variable name as "GOPATH" and Variable value as e.g. "C:\Go\GoPath"
+    * Path --> New --> %GOPATH%\bin
+    * Press OKs to save all settings above
   ```
   
 ## Install annie from github
 
-Open cmd.exe --> run 'go get github.com/iawia002/annie' --> wait for compiling the program (it has no output) --> Done
+```console
+Open cmd.exe
+> go get github.com/iawia002/annie' 
+wait for compiling the program (it has no output) --> Done
 
 Usage: annie -h
 Upgrade: go get -u github.com/iawia002/annie
