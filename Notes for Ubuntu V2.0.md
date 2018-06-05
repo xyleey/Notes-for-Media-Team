@@ -136,78 +136,25 @@ $ pip3 install caterpillar-hls
 $ echo "export PATH=$PATH:$HOME/.local/bin"
 ```	 
 
-### kvm48
+### KVM48
 [KVM48](https://github.com/SNH48Live/KVM48), the Koudai48 VOD Manager. It is capable of downloading all streaming VODs of a set of monitored members in a specified date range. It collaborates with aria2 and caterpillar
 
-Usage `kvm48 -h`
+Install `pip install KVM48`
+Usage   `kvm48 -h`
 
-On windows, you can find the path of `config.yml` printed in the output of `kvm48 -h`. 
+You need to edit YAML configuration file before you can use kvm48.
 
-Edit this configuration file first before you use it.
+The path would be `$HOME/.config/kvm48/config.yml`
+
+`$ vi config.yml`
 
 - New process mode for url.m3u8 (20180605 update)
   This update allows kvm48 to distinguish all `url.m3u8`. It picks them up and prints them into `m3u8.txt` as it consists to caterpillar's batch mode requirements. Then we run `caterpillar m3u8.txt` to download those VODs concurrently.
 
 
 
-Install  
-  $ pip install KVM48
+
  
-  $ kvm48 --help
-usage: kvm48 [-h] [-f FROM] [-t TO] [-s SPAN] [--dry] [--config CONFIG]
-             [--version] [--debug]
-
-KVM48, the Koudai48 VOD Manager.
-
-KVM48 downloads all streaming VODs of monitored members in a specified
-date range. Monitored members and other options are configured through
-the YAML configuration file
-
-  $HOME/.config/kvm48/config.yml
-
-or through a different configuration file specified with the --config
-option.
-
-The date range is determined as follows. All date and time are processed
-in China Standard Time (UTC+08:00). --from and --to are specified in the
-YYYY-MM-DD or MM-DD format.
-
-- If both --from and --to are specified, use those;
-
-- If --to is specified and --from is not, determine the date span
-  through --span and the `span' config option (the former takes
-  priority), then let the date range be `span' number of days
-  (inclusive) ending in the --to date.
-
-  For instance, if --to is 2018-02-18 and span is 7, then the date range
-  is 2018-02-12 to 2018-02-18.
-
-- If --from is specified and --to is not, then
-
-  - If --span is explicitly specified on the command line, let the date
-    range be `span' number of days starting from the --from date.
-
-  - Otherwise, let the date range be the --from date to today (in
-    UTC+08:00).
-
-- If neither --from nor --to is specified, use today (in UTC+08:00) as
-  the to date, and determine span in the same way as above.
-
-KVM48 uses aria2 as the downloader. Certain aria2c options, e.g.,
---max-connection-per-server=16, are enforced within kvm48; most options
-should be configured directly in the aria2 config file.
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -f FROM, --from FROM  starting day of date range
-  -t TO, --to TO        ending day of date range
-  -s SPAN, --span SPAN  number of days in date range
-  --dry                 print URL & filename combos but do not download
-  --config CONFIG       use this config file instead of the default
-  --version             show program's version number and exit
-  --debug
-
-
 
 ## Linux command tips 
 Tip: Return to the default directory: cd ~
