@@ -22,16 +22,22 @@
 
   检测是否安装成功及查看当前版本：`ffmpeg -version`
   
-5.三件套: `youtube-dl`, `you-get`(&`lulu`), `ykdl`是基于python的三个命令行下载工具。
-   安装与更新: `pip install –-upgrade youtube-dl you-get ykdl lulu`
-   *定期运行保证三件套都up to date
-6.caterpillar:hls协议下的地址适用。特指类似于“http://live.us.sinaimg.cn/000GfC07jx07gRLr24cn070d010007sP0k01.m3u8”的口袋录播地址。
-  安装：使用pip下载：pip install caterpillar-hls。详细信息见https://github.com/zmwangx/caterpillar#for-end-users
+5.'Y's: `youtube-dl`, `you-get`(&`lulu`), `ykdl`是基于python的三个命令行下载工具
 
-#可用chocolatey进行python/ffmpeg/aria2等的安装
- choco install -y python ffmpeg aria2 (--upgrade)
- Chocolatey.org 也有 youtube-dl/you-get 的 approved packages,但不确定版本是否最新
+   安装与更新: `pip install –-upgrade youtube-dl you-get ykdl lulu`
+   
+   * 定期运行保证三件套都 up to date
+   
+6.`caterpillar`:hls协议下的地址适用。特指类似于 http://live.us.sinaimg.cn/000GfC07jx07gRLr24cn070d010007sP0k01.m3u8 的口袋录播地址。
+
+  安装：使用pip下载：`pip install caterpillar-hls`详细信息见 https://github.com/zmwangx/caterpillar#for-end-users
+
+#可用[`chocolatey`](https://chocolatey.org/) 进行python/ffmpeg/aria2等的安装
+
+ `choco install -y python ffmpeg aria2 (--upgrade)`
  
+ Chocolatey.org 也有 youtube-dl/you-get 的 approved packages,但不确定版本是否最新
+
 ## General usage
 
 ### 'Y's
