@@ -65,7 +65,6 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   Upgrade `choco upgrade ffmpeg` or reconfigure the downloading package
   
   Version `ffmpeg -version`
-  
 
 - 下载和录制 (下述url均为actual url即视频源地址)
   
@@ -73,11 +72,9 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   
   `ffmpeg -i url -c copy -y output.ts` 下载视频或直播为视频文件，其文件名为output，封装格式为.ts, 如果文件重复则强制覆盖原有文件
   
-  
 - 本地转码
   
   `ffmpeg "file.ts" "file.flv"`
-  
   
 - 视频切割 (第一个时间表示剪切起始位置，第二个时间表示output的时长（注意不是剪切结束位置）)
   
@@ -87,7 +84,6 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   
   Ref: http://trac.ffmpeg.org/wiki/Seeking
 
-
 - 视频无损合并
   
   https://trac.ffmpeg.org/wiki/Concatenate 网站里的 'Concat demuxer' 部分.
@@ -96,13 +92,11 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   
   - `ffmpeg -f concat -i "concat.txt" -c copy "output.ts"`
 
-
 - 抽取视频/音频流
   
   `ffmpeg -i video -c:v copy -an output`
   
   `ffmpeg -i video -c:a copy -vn output`
-  
   
 - 已有视频画面上添加额外的图片/视频
   
