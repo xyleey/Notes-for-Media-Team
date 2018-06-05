@@ -91,11 +91,11 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
   
   精准切割：`ffmpeg -ss 00:04:18 -t 00:04:34 -accurate_seek -i input -c copy -avoid_negative_ts 1 output`
   
-           Ref: http://trac.ffmpeg.org/wiki/Seeking
+  Ref: http://trac.ffmpeg.org/wiki/Seeking
 
   视频无损合并
   
-  https://trac.ffmpeg.org/wiki/Concatenate网站里的'Concat demuxer'部分.
+  https://trac.ffmpeg.org/wiki/Concatenate 网站里的 'Concat demuxer' 部分.
   
   - create "concat.txt" with [file inputname.ts/flv/etc] by column.
   
@@ -131,7 +131,7 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
   
   ```console
   - Concat method
-    - -m {concat_demuxer,concat_protocol,0,1} 不同的concat method，默认使用concat_demuxer，或-m 1切换concat_protocol
+    -m {concat_demuxer,concat_protocol,0,1} 不同的concat method，默认使用concat_demuxer，或-m 1切换concat_protocol
       - 口袋录播文件 -> 默认即可
       - 公演录播文件 -> 有时以默认模式下载会出现例如 "Application provided duration: 7980637472 / timestamp: 7994129672 is out of range for mov/mp4 format" 的错误，而使用concat_protocol就不会出现这样的问题
   ```
