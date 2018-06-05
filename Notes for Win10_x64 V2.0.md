@@ -4,14 +4,19 @@
 
 2.查看版本`python --version`
 
-3.基于python的库的下载与更新: `pip list`, 列出所有已安装的库
+3.基于python的库的下载与更新: 
+  - `pip list` # 列出所有已安装的库
 
-                            `pip list –outdated`, 列出旧版本的库(即可更新版本)
+  - `pip list –outdated` # 列出旧版本的库(即可更新版本)
                             
-                            `pip install –-upgrade xxx xxx xxx etc.`，下载并更新xxx,xxx,xxx,等
+  - `pip install –-upgrade xxx xxx xxx etc.` # 下载并更新xxx,xxx,xxx,等
                             
-4.ffmpeg: 从官网下载ffmpeg for windows后，配置path即可。  
-  检测是否安装成功及查看当前版本：cmd ->ffmpeg -version
+4.[`ffmpeg`](http://ffmpeg.org/download.html): 从官网下载ffmpeg for windows后，配置path即可。  
+
+  检测是否安装成功及查看当前版本：
+  
+  `ffmpeg -version`
+  
 5.三件套: youtube-dl, you-get(&lulu), ykdl是基于python的三个命令行下载工具。
    安装与更新: pip install –-upgrade youtube-dl you-get ykdl lulu
    P.S.定期运行保证三件套都up to date
