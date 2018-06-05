@@ -6,10 +6,12 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
 
 ## Index
 - [Operation environment](#operation-environment)
-- [General usage](#general-usage)
+- [Tools](#tools)
+  - [aria2](#aria2)
   - ['Y's](#ys)
   - [ffmpeg](#ffmpeg)
-  - [caterpillar](#caterpillar)
+  - [caterpillar-hls](#caterpillar-hls)
+  - [kvm48](#kvm48)
 
 ## Operation environment
 
@@ -31,7 +33,19 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
  
  Chocolatey.org 也有 youtube-dl/you-get 的 approved packages,但不确定版本是否最新
 
-## General usage
+## Tools
+
+### aria2
+
+[Aria2](https://aria2.github.io/), a funtional technique to download under multiple threads.
+
+Install `choco install aria2` or download the release
+  
+Upgrade `choco upgrade aria2` or download the new release
+
+Version `aria2c -v`
+
+Usage   `aria2c -h` or see examples on https://aria2.github.io/
 
 ### 'Y's
 
@@ -108,7 +122,7 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   
   `ffmpeg -i "1.mp4" -i "2.png" -filter_complex "overlay=10:1635" pix8.mp4`
 
-### caterpillar 
+### caterpillar-hls 
 
   [`caterpillar-hls`](https://github.com/zmwangx/caterpillar) 适用于下载hls下的VODs, i.e.`url.m3u8`
 
@@ -206,6 +220,10 @@ This is because of the incompatible version of urllib3.
 That's it ! We must have, the urllib3 1.22 for instance.
 - Run `pip uninstall -y urllib3 && pip install "urllib3==1.22"`
 - Done ! Now you could try `caterpillar -h` to see the options
+
+### kvm48
+[KVM48](https://github.com/SNH48Live/KVM48), the Koudai48 VOD Manager. It is capable of downloading all streaming VODs of a set of monitored members in a specified date range. It collaborates with aria2 and caterpillar
+
 
 
 <p align="center">
