@@ -127,7 +127,8 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
        公演录播文件 -> 有时以默认模式下载会出现例如 "Application provided duration: 7980637472 / timestamp: 7994129672 is out of range for mov/mp4 format" 的错误，而使用concat_protocol就不会出现这样的问题
      ```
 - Batch mode (20180605 update)
-     caterpillar `manidest.txt` which contains:
+     caterpillar `manidest.txt` which contains
+     
      ```console
      https://example.com/hls/1.m3u8	1.mp4
      https://example.com/hls/2.m3u8	2.mp4
