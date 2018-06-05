@@ -1,3 +1,5 @@
+<font color=#0099ff size=12 face="华文彩云">NOTED ALL BY YESUNG</font>
+
 ## Index
 - [Operation environment](#operation-environment)
 - [General usage](#general-usage)
@@ -118,7 +120,7 @@
   
   对工作组而言主要用于处理口袋录播当中例如 http://live.us.sinaimg.cn/000GfC07jx07gRLr24cn070d010007sP0k01.m3u8 的hls协议下m3u8文件下载出错的情况。
   ```
-  Error: `Non-monotonous DTS in output stream`的黄色文字输出
+  Error: Non-monotonous DTS in output stream 的黄色文字输出
   可直接用caterpillar下载这样的m3u8文件，一旦出错会自动修复。
   usage: caterpillar m3u8_url 以默认模式下载并修复(如有)该地址下的口袋录播文件，并且封装为.mp4且生成的文件可直接传b站 
          *   -h 查看详细用法帮助
@@ -128,4 +130,3 @@
                                                                公演录播文件->有时以默认模式下载会出现例如"Application provided duration: 7980637472 / timestamp: 7994129672 is out of range for mov/mp4 format"的错误，而使用concat_protocol就不会出现这样的问题
   ```
   
-NOTED ALL BY YESUNG
