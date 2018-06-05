@@ -1,6 +1,6 @@
 ## Index
-- [Operation environment](#operation environment)
-- [General usage](#general usage)
+- [Operation environment](#operation-environment)
+- [General usage](#general-usage)
   - ['Y's](#ys)
   - [ffmpeg](#ffmpeg)
   - [caterpillar](#caterpillar)
