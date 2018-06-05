@@ -11,7 +11,7 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
   - ['Y's](#ys)
   - [ffmpeg](#ffmpeg)
   - [caterpillar-hls](#caterpillar-hls)
-  - [kvm48](#kvm48)
+  - [KVM48](#kvm48)
 
 ## Operation environment
 
@@ -221,7 +221,7 @@ That's it ! We must have, the urllib3 1.22 for instance.
 - Run `pip uninstall -y urllib3 && pip install "urllib3==1.22"`
 - Done ! Now you could try `caterpillar -h` to see the options
 
-### kvm48
+### KVM48
 [KVM48](https://github.com/SNH48Live/KVM48), the Koudai48 VOD Manager. It is capable of downloading all streaming VODs of a set of monitored members in a specified date range. It collaborates with aria2 and caterpillar
 
 Usage `kvm48 -h`
