@@ -32,6 +32,7 @@ wait for compiling the program (it has no output) --> Done
 ## Examples
 
 1) Show all part information respectively from https://www.bilibili.com/video/av22009762/
+   
    `annie -i -p https://www.bilibili.com/video/av22009762/` (if download, delete -i)
 ```
  Site:      哔哩哔哩 bilibili.com
@@ -55,6 +56,7 @@ wait for compiling the program (it has no output) --> Done
 .etc
 
 2) Download `1080P60FPS` video from https://www.bilibili.com/video/av21999387
+   
    `annie -c cookies "https://www.bilibili.com/video/av21999387"` 
    
 3) Show video information from http://v.youku.com/v_show/id_XMzUwMTY0NDQ0MA==.html?spm=a2h0k.8191407._xbox_refresh.5~5!2~5~P~A&from=s1.8-4.999
