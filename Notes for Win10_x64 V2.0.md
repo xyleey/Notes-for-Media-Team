@@ -1,5 +1,4 @@
-
-<h1 align="center"> NOTED ALL BY YESUNG </h1>
+<h1 align="center"><img src="https://github.com/TeamSII/TeamSII.github.io/blob/master/image/NOTES%20copyright.png" width="150" height="150" alt="KVM48"></h1>
 
 ## Index
 - [Operation environment](#operation-environment)
