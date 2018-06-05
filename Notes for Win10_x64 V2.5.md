@@ -143,6 +143,7 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   RequestsDependencyWarning)
   ```
 - Run `pip install -U requests certifi chardet idna urllib3`, then we have (in my case)
+
   ```console
   Collecting pipdeptree
   Downloading https://files.pythonhosted.org/packages/f2/25/cf80fcf4885ab46619f0b7922c1a648c5f1c4186320dc624754fe0130c7a/pipdeptree-0.12.1-py3-none-any.whl
@@ -190,6 +191,7 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   ```
 This is because of the incompatible version of urllib3.
 - Run `pip install -U pipdeptree && pipdeptree -p requests` as administrator. We can see the warning
+
   ```console
   Warning!!! Possibly conflicting dependencies found:
   * requests==2.18.4
