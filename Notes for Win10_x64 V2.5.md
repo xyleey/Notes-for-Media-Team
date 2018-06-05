@@ -74,26 +74,30 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
   Upgrade `choco upgrade ffmpeg` or reconfigure the downloading package
   
   Version `ffmpeg -version`
+  
 
-  下载和录制 (下述url均为actual url即视频源地址)
+- 下载和录制 (下述url均为actual url即视频源地址)
   
   `ffmpeg -i url -c copy output.ts`    下载视频或直播为视频文件，其文件名为output，封装格式为.ts
   
   `ffmpeg -i url -c copy -y output.ts` 下载视频或直播为视频文件，其文件名为output，封装格式为.ts, 如果文件重复则强制覆盖原有文件
   
-  转码（不适用于口袋直播的转码）
   
-  `ffmpeg "file.ts" "file.flv"` 本地转码
+- 本地转码
   
-  视频切割 (第一个时间表示剪切起始位置，第二个时间表示output的时长（注意不是剪切结束位置）)
+  `ffmpeg "file.ts" "file.flv"`
   
-  基础切割：`ffmpeg -ss 01:31:29 -i input.mp4 -c copy -t 00:13:50 output.mp4`
   
-  精准切割：`ffmpeg -ss 00:04:18 -t 00:04:34 -accurate_seek -i input -c copy -avoid_negative_ts 1 output`
+- 视频切割 (第一个时间表示剪切起始位置，第二个时间表示output的时长（注意不是剪切结束位置）)
+  
+  - 基础切割：`ffmpeg -ss 01:31:29 -i input.mp4 -c copy -t 00:13:50 output.mp4`
+  
+  - 精准切割：`ffmpeg -ss 00:04:18 -t 00:04:34 -accurate_seek -i input -c copy -avoid_negative_ts 1 output`
   
   Ref: http://trac.ffmpeg.org/wiki/Seeking
 
-  视频无损合并
+
+- 视频无损合并
   
   https://trac.ffmpeg.org/wiki/Concatenate 网站里的 'Concat demuxer' 部分.
   
@@ -101,13 +105,15 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
   
   - `ffmpeg -f concat -i "concat.txt" -c copy "output.ts"`
 
-  抽取视频/音频流
+
+- 抽取视频/音频流
   
   `ffmpeg -i video -c:v copy -an output`
   
   `ffmpeg -i video -c:a copy -vn output`
   
-  已有视频画面上添加额外的图片/视频
+  
+- 已有视频画面上添加额外的图片/视频
   
   http://ffmpeg.org/ffmpeg-filters.html#overlay-1
   
@@ -129,10 +135,19 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
   
   Ultimate features
   
-  ```console
-  - Concat method
-    -m {concat_demuxer,concat_protocol,0,1} 不同的concat method，默认使用concat_demuxer，或-m 1切换concat_protocol
-      - 口袋录播文件 -> 默认即可
-      - 公演录播文件 -> 有时以默认模式下载会出现例如 "Application provided duration: 7980637472 / timestamp: 7994129672 is out of range for mov/mp4 format" 的错误，而使用concat_protocol就不会出现这样的问题
-  ```
-  
+- Concat method
+     ```console
+     -m {concat_demuxer,concat_protocol,0,1} 不同的concat method，默认使用concat_demuxer，或-m 1切换concat_protocol
+       口袋录播文件 -> 默认即可
+       公演录播文件 -> 有时以默认模式下载会出现例如 "Application provided duration: 7980637472 / timestamp: 7994129672 is out of range for mov/mp4 format" 的错误，而使用concat_protocol就不会出现这样的问题
+     ```
+- Batch mode (20180605 update)
+     caterpillar `manidest.txt` which contains:
+     ```console
+     https://example.com/hls/1.m3u8	1.mp4
+     https://example.com/hls/2.m3u8	2.mp4
+     https://example.com/hls/3.m3u8	3.mp4
+     ```
+     
+
+*Notes for Win10_x64 V2.5.md Update 20180605
