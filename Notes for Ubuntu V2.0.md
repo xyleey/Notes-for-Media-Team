@@ -8,10 +8,11 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
 - [Ubuntu for Windows 10](#ubuntu-for-Windows-10)
 - [Tools](#tools)
   - [aria2](#aria2)
-  - ['Y's](#ys)
   - [ffmpeg](#ffmpeg)
+  - [Python](#python)
   - [caterpillar-hls](#caterpillar-hls)
   - [kvm48](#kvm48)
+  - ['Y's](#ys)
 - [Linux command tips](#linux-command-tips) 
  
 ## Ubuntu for Windows 10
@@ -51,13 +52,14 @@ $ ffmpeg -version
 $ sudo apt install software-properties-common
 ```
 
-	
-  - Python 3.6.0+ depends on Ubuntu release
-    $ sudo apt update
-    $ sudo apt install python3 python3-pip+
-	show python version: apt-cache show python3 | grep -i version
-	*** Maybe you should download python 3.6.4 by pyenv (see [Install Python 3.6+ in Ubuntu by pyenv])
-	
+### Python 
+- Python 3.6.0+ depends on Ubuntu release
+  ```console
+  $ sudo apt update
+  $ sudo apt install python3 python3-pip+
+  $ apt-cache show python3 | grep -i version
+  ```	
+*** Maybe you should download python 3.6.4 by pyenv (see [Install Python 3.6+ in Ubuntu by pyenv])
 ------------------------------------------------------------------------------------------------------------------------------------
 
 #Install Python 3.6+ in Ubuntu by pyenv
