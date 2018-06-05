@@ -59,43 +59,52 @@ $ sudo apt install software-properties-common
   $ sudo apt install python3 python3-pip+
   $ apt-cache show python3 | grep -i version
   ```	
-  *** Maybe you should download python 3.6.4 by pyenv (see [Install Python 3.6+ in Ubuntu by pyenv])
-------------------------------------------------------------------------------------------------------------------------------------
+  *** Maybe you should download python 3.6.4 by pyenv (see [Install Python 3.6+ in Ubuntu by pyenv] below)
 
-#Install Python 3.6+ in Ubuntu by pyenv
+- [Install Python 3.6+ in Ubuntu by pyenv](https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#zesty-1704-or-earlier-with-pyenv)
 
-Guide: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#zesty-1704-or-earlier-with-pyenv
+Guidance: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#zesty-1704-or-earlier-with-pyenv
+```console
+$ sudo apt update 
 
-* $ sudo apt update 
+Follow the instruction on the pyenv wiki to install prerequisite packages with apt;
 
-* Follow these instructions on the pyenv wiki to install prerequisite packages with apt;
-  $ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev
+$ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev
   
-* You must have git:
-  $ sudo apt install -y git 
+You must have git:
+
+$ sudo apt install -y git 
   
-* Check out pyenv where you want it installed. (as default $HOME/.pyenv)
-  $ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+Check out pyenv where you want it installed. (as default $HOME/.pyenv)
+
+$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
   
-* Define environment variable PYENV_ROOT
-  $ nano ~/.bashrc
-  # Append the following lines:
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
+Define environment variable PYENV_ROOT
+
+$ nano ~/.bashrc
+ # Append the following lines:
+   export PYENV_ROOT="$HOME/.pyenv"
+   export PATH="$PYENV_ROOT/bin:$PATH"
 	
-    eval "$(pyenv init -)"
+   eval "$(pyenv init -)"
   Ctrl+X to exit and press Y as "save & exit", [Enter]
   
-* Restart your shell so the path changes take effect
-  $ exec bash -l 
+Restart your shell so the path changes take effect
 
-* See those lines you add at the bottom of 。bashrc (just to ensure the Appendix)
-  $ tail -5 .bashrc
+$ exec bash -l 
 
-* List all the things you can install (optional)
-  $ pyenv install -l 
-  wait for several seconds to load the list
-  
+See those lines you add at the bottom of 。bashrc (just to ensure the Appendix)
+
+$ tail -5 .bashrc
+
+List all the things you can install (optional)
+
+$ pyenv install -l 
+
+wait for several seconds to load the list
+```
+
+Now we can use pyenv to install python
 * Install python3.6.4
   $ pyenv install 3.6.4
   # You can find the latest stable Python release number at https://www.python.org/downloads/, which is not necessarily 3.6.4, apparently.
