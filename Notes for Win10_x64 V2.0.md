@@ -69,41 +69,56 @@
 ### ffmpeg
 
   下载和录制 (下述url均为actual url即视频源地址)
+  
   `ffmpeg -i url -c copy output.ts`    下载视频或直播为视频文件，其文件名为output，封装格式为.ts
+  
   `ffmpeg -i url -c copy -y output.ts` 下载视频或直播为视频文件，其文件名为output，封装格式为.ts, 如果文件重复则强制覆盖原有文件
   
   转码（不适用于口袋直播的转码）
+  
   `ffmpeg "file.ts" "file.flv"` 本地转码
   
   视频切割 (第一个时间表示剪切起始位置，第二个时间表示output的时长（注意不是剪切结束位置）)
+  
   基础切割：`ffmpeg -ss 01:31:29 -i input.mp4 -c copy -t 00:13:50 output.mp4`
+  
   精准切割：`ffmpeg -ss 00:04:18 -t 00:04:34 -accurate_seek -i input -c copy -avoid_negative_ts 1 output`
+  
            Ref: http://trac.ffmpeg.org/wiki/Seeking
 
   视频无损合并
+  
   https://trac.ffmpeg.org/wiki/Concatenate网站里的'Concat demuxer'部分.
+  
   - create "concat.txt" with [file inputname.ts/flv/etc] by column.
+  
   - `ffmpeg -f concat -i "concat.txt" -c copy "output.ts"`
 
   抽取视频/音频流
+  
   `ffmpeg -i video -c:v copy -an output`
+  
   `ffmpeg -i video -c:a copy -vn output`
   
   已有视频画面上添加额外的图片/视频
+  
   http://ffmpeg.org/ffmpeg-filters.html#overlay-1
+  
   `ffmpeg -i input -i logo -filter_complex 'overlay=10:main_h-overlay_h-10' output`
   
   e.g.在狼人杀录屏文件1.mp4(886x1920)中贴近左边界加入一个在[发送弹幕按钮]上方适当位置的水印2.png(300x100)，适用时长为全部(默认)
+  
   `ffmpeg -i "1.mp4" -i "2.png" -filter_complex "overlay=10:1635" pix8.mp4`
 
 ### caterpillar 
 
   已上传到PyPI上，可以直接 `pip install caterpillar-hls` (https://github.com/zmwangx/caterpillar#for-end-users)
+  
   完全可以用于所有M3U8下载（且显然比FFmpeg/you-get等单线程的快），并不限于出错时。
   
-  对工作组而言主要用于处理口袋录播当中例如http://live.us.sinaimg.cn/000GfC07jx07gRLr24cn070d010007sP0k01.m3u8的hls协议下m3u8文件下载出错的情况。
+  对工作组而言主要用于处理口袋录播当中例如 http://live.us.sinaimg.cn/000GfC07jx07gRLr24cn070d010007sP0k01.m3u8 的hls协议下m3u8文件下载出错的情况。
   ```
-  Error: Non-monotonous DTS in output stream的黄色文字输出
+  Error: `Non-monotonous DTS in output stream`的黄色文字输出
   可直接用caterpillar下载这样的m3u8文件，一旦出错会自动修复。
   usage: caterpillar m3u8_url 以默认模式下载并修复(如有)该地址下的口袋录播文件，并且封装为.mp4且生成的文件可直接传b站 
          *   -h 查看详细用法帮助
