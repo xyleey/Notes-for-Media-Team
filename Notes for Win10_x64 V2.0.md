@@ -1,4 +1,15 @@
-## 环境安装
+## Index
+- [Operation environment](#operation environment)
+- [General usage](#general usage)
+  - ['Y's](#'y's)
+  - []()
+  - []()
+- []()
+- []()
+- []()
+- []()
+
+## Operation environment
 
 1.安装[`python3.6.5`](https://www.python.org/downloads/)
 
@@ -13,9 +24,7 @@
                             
 4.[`ffmpeg`](http://ffmpeg.org/download.html): 从官网下载ffmpeg for windows后，配置path即可。  
 
-  检测是否安装成功及查看当前版本：
-  
-  `ffmpeg -version`
+  检测是否安装成功及查看当前版本：`ffmpeg -version`
   
 5.三件套: youtube-dl, you-get(&lulu), ykdl是基于python的三个命令行下载工具。
    安装与更新: pip install –-upgrade youtube-dl you-get ykdl lulu
@@ -27,9 +36,9 @@
  choco install -y python ffmpeg aria2 (--upgrade)
  Chocolatey.org 也有 youtube-dl/you-get 的 approved packages,但不确定版本是否最新
  
-常规用法
+## General usage
 
-1.三件套
+# 'Y's
 
   youtube-dl, 可用于下载Youtube等网页中的视频,也能够解析m3u8地址进行下载
   usage: youtube-dl url 下载当前视频最高版本
