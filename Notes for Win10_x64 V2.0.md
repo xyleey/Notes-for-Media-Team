@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://github.com/TeamSII/TeamSII.github.io/blob/master/image/NOTES%20copyright.png" width="1046" height="794" alt="YESUNG"></h1>
+<h1 align="center"><img src="https://github.com/TeamSII/TeamSII.github.io/blob/master/image/NOTES%20copyright.png" width="500" height="400" alt="YESUNG"></h1>
 
 ## Index
 - [Operation environment](#operation-environment)
