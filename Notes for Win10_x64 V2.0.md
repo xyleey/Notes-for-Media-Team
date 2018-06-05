@@ -1,5 +1,5 @@
 <p align="center">
-<font color=#0099ff size=12 face="arial">NOTED ALL BY YESUNG</font>
+<font color=blue size=12 face="arial">NOTED ALL BY YESUNG</font>
 </p>
 
 ## Index
