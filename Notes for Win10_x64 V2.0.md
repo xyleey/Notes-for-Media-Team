@@ -1,4 +1,4 @@
-`console
+```console
 ## Index
 - [Operation environment](#operation environment)
 - [General usage](#general usage)
