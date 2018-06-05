@@ -17,19 +17,23 @@ Source: https://github.com/iawia002/annie
   
 ## Install annie from github
 
-```
 Open cmd.exe
 Run `go get github.com/iawia002/annie`
 wait for compiling the program (it has no output) --> Done
-```
 
-Usage: annie -h
-Upgrade: go get -u github.com/iawia002/annie
+## Usage
 
-Typical examples
+`annie -h`
+
+## Upgrade
+
+`go get -u github.com/iawia002/annie`
+
+## Examples
+
 1) Show all part information respectively from https://www.bilibili.com/video/av22009762/
-   annie -i -p https://www.bilibili.com/video/av22009762/ (if download, delete -i)
-
+   `annie -i -p https://www.bilibili.com/video/av22009762/` (if download, delete -i)
+```
  Site:      哔哩哔哩 bilibili.com
  Title:     【SNH48】【轻声密语】一生所愿有几何，人生总有尴尬时，再忆红白泪笑曲，耳边呢喃最销魂 TeamSII 《第48区》公演(2018041) 前四首: 第48区+破茧+MUTE+Drop It
  Type:      video
@@ -47,16 +51,18 @@ Typical examples
      Quality:         高清 1080P
      Size:            1133.88 MiB (1188958387 Bytes)
      # download with: annie -f default "URL"
-
+```
 .etc
-2) Download 1080P60FPS video from https://www.bilibili.com/video/av21999387
-   annie -c cookies "https://www.bilibili.com/video/av21999387" 
+
+2) Download `1080P60FPS` video from https://www.bilibili.com/video/av21999387
+   `annie -c cookies "https://www.bilibili.com/video/av21999387"` 
    
 3) Show video information from http://v.youku.com/v_show/id_XMzUwMTY0NDQ0MA==.html?spm=a2h0k.8191407._xbox_refresh.5~5!2~5~P~A&from=s1.8-4.999
-   annie -i "http://v.youku.com/v_show/id_XMzUwMTY0NDQ0MA==.html?spm=a2h0k.8191407._xbox_refresh.5~5!2~5~P~A&from=s1.8-4.999" (if download, delete -i and will choose 1080P as default)
+   `annie -i "http://v.youku.com/v_show/id_XMzUwMTY0NDQ0MA==.html?spm=a2h0k.8191407._xbox_refresh.5~5!2~5~P~A&from=s1.8-4.999" `
+   (if download, delete -i and will choose 1080P as default)
 
 4) Show video information from http://www.iqiyi.com/v_19rrc1ef20.html?list=19rrlwp41e
-   annie -i "http://www.iqiyi.com/v_19rrc1ef20.html?list=19rrlwp41e" (if download, delete -i)
+   `annie -i "http://www.iqiyi.com/v_19rrc1ef20.html?list=19rrlwp41e" `(if download, delete -i)
    * this may access 1080P with required cookies but still has not tested yet.
    
 Thanks to @iawia for sharing this useful tool, it helped instead of the previous one "lulu".
