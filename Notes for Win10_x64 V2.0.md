@@ -1,5 +1,6 @@
-环境安装
-1.安装python3.6.4  
+## 环境安装
+
+1.安装[python3.6.4](https://www.python.org/downloads/)
 2.查看版本python --version
 3.基于python的库的下载与更新: pip list, 列出所有已安装的库
                             pip list –outdated, 列出旧版本的库(即可更新版本)
