@@ -1,7 +1,4 @@
-<p align="center">
-<font color=blue size=12 face="arial">NOTED ALL BY YESUNG</font>
-</p>
-
+<hl align="center">NOTED ALL BY YESUNG</hl>
 ## Index
 - [Operation environment](#operation-environment)
 - [General usage](#general-usage)
