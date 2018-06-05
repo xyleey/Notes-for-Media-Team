@@ -43,31 +43,28 @@
 
 ### 'Y's
 
-  `youtube-dl` 可用于下载Youtube等网页中的视频,也能够解析m3u8地址进行下载
-  
-  Usage: 
-  
-  `youtube-dl url` 下载当前视频最高版本
-  
-  `youtube-dl -F url` 查看当前视频不同清晰度对应-f数据
-         
-  `youtube-dl -f xx -g url` 查找xx对应清晰度的源地址链接
+`youtube-dl` 可用于下载Youtube等网页中的视频,也能够解析m3u8地址进行下载
+ Usage: 
+  - `youtube-dl url`          下载当前视频最高版本
+  - `youtube-dl -F url`       查看当前视频不同清晰度对应-f数据   
+  - `youtube-dl -f xx -g url` 查找xx对应清晰度的源地址链接
 
-  `you-get` 可用于下载斗鱼、b站、优酷等网站的视频，同时具有查看当前视频信息和寻找源地址的功能
- 
+`you-get` 可用于下载斗鱼、b站、优酷等网站的视频，同时具有查看当前视频信息和寻找源地址的功能
  Usage: 
    - `you-get url`    直接下载当前网页中的内容，适用斗鱼直播录制
    - `you-get -l url` 同时下载b站多p视频
    - `you-get -i url` 查看当前网页中可下载的视频信息
    - `you-get -u url` 查找当前页面视频的源地址，适用b站直播录制 
          
-  * `lulu` 实质为you-get的分支，下载b站视频能力比you-get稳定一些
-  usage: lulu weburl
-         lulu -h see all options
+*`lulu` 实质为you-get的分支，下载b站视频能力比you-get稳定一些
+  Usage:
+   - `lulu weburl`
+   - `lulu -h`     see all options
 
-  ykdl, 功能和用法与上面两个类似，但设计上更加能够应付网络状况较差的直播录制，较少用
-  usage: ykdl -i url, 只显示视频信息而不进行下载
-         ykdl -l url, 将所给的视频url作为播放列表进行下载
+`ykdl` 功能和用法与上面两个类似，但设计上更加能够应付网络状况较差的直播录制，较少用
+  Usage:
+   - `ykdl -i url` 只显示视频信息而不进行下载
+   - `ykdl -l url` 将所给的视频url作为播放列表进行下载
 
 ### ffmpeg
 
