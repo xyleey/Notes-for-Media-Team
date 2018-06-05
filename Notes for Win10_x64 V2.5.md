@@ -148,7 +148,7 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
      https://example.com/hls/2.m3u8	2.mp4
      https://example.com/hls/3.m3u8	3.mp4
      ```
-   <p align="center"> -------------------------------------------- End -------------------------------------------- </p>
+   <p align="center"> ------------------------------------------------------ End ------------------------------------------------------ </p>
    <p align="left">*Notes for Win10_x64 V2.5.md Update 20180605</p>  
    
 
