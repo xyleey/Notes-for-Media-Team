@@ -12,27 +12,32 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
   - [ffmpeg](#ffmpeg)
   - [caterpillar-hls](#caterpillar-hls)
   - [kvm48](#kvm48)
-  
+- [Linux command tips](#linux-command-tips) 
+ 
 ## Ubuntu for Windows 10
 
 [Install the Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
 1. Open PowerShell as Administrator and run
+
 `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+
 2. Restart your computer when prompted.
 
-Guidance: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices
+3. Open the Microsoft Store and choose your favorite Linux distribution. I recommand the newest version `Ubuntu 18.04`.
 
-Tip: Return to the default directory: cd ~
-     Default folder for Ubuntu in Win10 in my case: 
-	         C:\Users\Yesung\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\Yesung
-	 history | more
+## Tools
 
-1. Install Ubuntu as the windows subsystem for linux
-   https://docs.microsoft.com/en-us/windows/wsl/install-win10 Online Guidance 
-   Only the Ubuntu need to be downloaded from app store in Windows10
-   
-2. Install tools
+### aria2
+[Aria2](https://aria2.github.io/), a funtional technique to download under multiple threads.
+
+```console
+$ sudo apt install -y aria2
+$ aria2c --version or $ aria2c --version
+```
+Usage `$ aria2c -h` or see examples on https://aria2.github.io/
+
+### ffmpeg
 
   - ffmpeg -> use jonathonf/ffmpeg-3.
 
@@ -45,9 +50,7 @@ Tip: Return to the default directory: cd ~
     $ sudo apt install software-properties-common
      
   - Aria2
-    $ sudo apt install -y aria2
-	$ aria2c --version
-    Usage is same as in windows
+    
 	
   - Python 3.6.0+ depends on Ubuntu release
     $ sudo apt update
@@ -174,6 +177,26 @@ optional arguments:
   --config CONFIG       use this config file instead of the default
   --version             show program's version number and exit
   --debug
+
+
+### kvm48
+[KVM48](https://github.com/SNH48Live/KVM48), the Koudai48 VOD Manager. It is capable of downloading all streaming VODs of a set of monitored members in a specified date range. It collaborates with aria2 and caterpillar
+
+Usage `kvm48 -h`
+
+On windows, you can find the path of `config.yml` printed in the output of `kvm48 -h`. 
+
+Edit this configuration file first before you use it.
+
+- New process mode for url.m3u8 (20180605 update)
+  This update allows kvm48 to distinguish all `url.m3u8`. It picks them up and prints them into `m3u8.txt` as it consists to caterpillar's batch mode requirements. Then we run `caterpillar m3u8.txt` to download those VODs concurrently.
+
+## Linux command tips 
+Tip: Return to the default directory: cd ~
+     Default folder for Ubuntu in Win10 in my case: 
+	         C:\Users\Yesung\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\Yesung
+	 history | more
+
 
 <p align="center">
 ------------------------------------------------------------------ End ------------------------------------------------------------------
