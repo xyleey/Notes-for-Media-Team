@@ -5,7 +5,7 @@ These notes are positively tested as available on the platform of Ubuntu, a subs
 Please keep your CLU consistent with the version mentioned in the notes or, apply it in your special demand.
 
 ## Index
-- [Ubuntu for Windows10](#operation-environment)
+- [Ubuntu for Windows 10](#ubuntu-for-Windows-10)
 - [Tools](#tools)
   - [aria2](#aria2)
   - ['Y's](#ys)
@@ -13,7 +13,13 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
   - [caterpillar-hls](#caterpillar-hls)
   - [kvm48](#kvm48)
   
-  Ubuntu for Windows10 - Linux command lines （RGB 32 60 69）
+## Ubuntu for Windows 10
+
+[Install the Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+
+1. Open PowerShell as Administrator and run
+`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+2. Restart your computer when prompted.
 
 Guidance: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices
 
