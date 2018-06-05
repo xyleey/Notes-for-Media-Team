@@ -33,24 +33,24 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
 
 ```console
 $ sudo apt install -y aria2
-$ aria2c --version or $ aria2c --version
+$ aria2c -v   or   $ aria2c --version
 ```
 Usage `$ aria2c -h` or see examples on https://aria2.github.io/
 
 ### ffmpeg
+[`ffmpeg`](http://ffmpeg.org/download.html) -> use `jonathonf/ffmpeg-3`.
+```console
+$ sudo add-apt-repository ppa:jonathonf/ffmpeg-3
+$ sudo apt-get update
+$ sudo apt-get install -y ffmpeg
+$ ffmpeg -version
+```
+#In case of `add-apt-repository: command not found`
 
-  - ffmpeg -> use jonathonf/ffmpeg-3.
+```console
+$ sudo apt install software-properties-common
+```
 
-    $ sudo add-apt-repository ppa:jonathonf/ffmpeg-3
-    $ sudo apt-get update
-    $ sudo apt-get install -y ffmpeg
-	* $ ffmpeg -version
-
-    # In case of `add-apt-repository: command not found':
-    $ sudo apt install software-properties-common
-     
-  - Aria2
-    
 	
   - Python 3.6.0+ depends on Ubuntu release
     $ sudo apt update
