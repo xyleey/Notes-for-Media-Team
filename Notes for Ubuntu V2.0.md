@@ -21,7 +21,7 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
 
 1. Open PowerShell as Administrator and run
 
-`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+  `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
 
 2. Restart your computer when prompted.
 
