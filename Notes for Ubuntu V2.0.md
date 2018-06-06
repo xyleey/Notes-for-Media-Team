@@ -150,7 +150,7 @@ You need to edit YAML configuration file before you can use kvm48 `$ vi config.y
 
 The path would be `$HOME/.config/kvm48/config.yml`
 
-- New process mode for url.m3u8 (20180605 update)
+- New process mode for url.m3u8 (20180606 update)
   This update allows kvm48 to distinguish all `url.m3u8`. It picks them up and prints them into `m3u8.txt` as it consists to caterpillar's batch mode requirements. Then we run `caterpillar m3u8.txt` to download those VODs concurrently.
 
 ## Linux command tips 
@@ -175,6 +175,6 @@ The path would be `$HOME/.config/kvm48/config.yml`
 ------------------------------------------------------------------ End ------------------------------------------------------------------
 </p>
 <p align="left">
-*Notes for Win10_x64 V2.5.md Update 20180605
+*Notes for Win10_x64 V2.5.md Update 20180606
 </p>  
    
