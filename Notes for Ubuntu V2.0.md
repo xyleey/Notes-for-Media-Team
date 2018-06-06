@@ -27,6 +27,10 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
 
 3. Open the Microsoft Store and choose your favorite Linux distribution. I recommand the newest version `Ubuntu 18.04`.
 
+* Default folder for Ubuntu in Win10 in my case:    
+`C:\Users\User\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\User
+	 history | more`
+
 ## Tools
 
 ### aria2
@@ -142,25 +146,29 @@ $ echo "export PATH=$PATH:$HOME/.local/bin"
 Install `pip install KVM48`
 Usage   `kvm48 -h`
 
-You need to edit YAML configuration file before you can use kvm48.
+You need to edit YAML configuration file before you can use kvm48 `$ vi config.yml`.
 
 The path would be `$HOME/.config/kvm48/config.yml`
-
-`$ vi config.yml`
 
 - New process mode for url.m3u8 (20180605 update)
   This update allows kvm48 to distinguish all `url.m3u8`. It picks them up and prints them into `m3u8.txt` as it consists to caterpillar's batch mode requirements. Then we run `caterpillar m3u8.txt` to download those VODs concurrently.
 
-
-
-
- 
-
 ## Linux command tips 
-Tip: Return to the default directory: cd ~
-     Default folder for Ubuntu in Win10 in my case: 
-	         C:\Users\Yesung\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\Yesung
-	 history | more
+- Switch in cmd.exe to bash `\...\directory path> bash`
+
+- Change directory `cd /mnt/.../path`
+
+- Return to the default directory `$ cd ~`
+
+- Return to previous directory `$ cd ..`
+
+- Create new folder/file `$ mkdir /mnt/.../foldername` `$ /mnt/.../filename.xxx`
+
+- Mover a file into specific folder `$ mv filename.xxx /mnt/.../path`  
+
+- Text editors
+   - `nano text`
+   - `vi text`
 
 
 <p align="center">
