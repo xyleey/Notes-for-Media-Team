@@ -135,10 +135,18 @@ $ python3 --version
 [`caterpillar-hls`](https://github.com/zmwangx/caterpillar) 适用于下载hls下的VODs, i.e.`url.m3u8`
 ```console
 $ pip3 install caterpillar-hls
-  #You need to add $HOME/.local/bin to your $PATH to use caterpillar
   
+You need to add $HOME/.local/bin to your $PATH to use caterpillar
 $ echo "export PATH=$PATH:$HOME/.local/bin"
-```	 
+```	
+- Batch mode (20180605 update)
+
+     `caterpillar manifest.txt` where the `manifest.txt` contains
+     
+     ```console
+     https://example.com/hls/1.m3u8	1.mp4
+     https://example.com/hls/2.m3u8	2.mp4
+     https://example.com/hls/3.m3u8	3.mp4
 
 ### KVM48
 [KVM48](https://github.com/SNH48Live/KVM48), the Koudai48 VOD Manager. It is capable of downloading all streaming VODs of a set of monitored members in a specified date range. It collaborates with aria2 and caterpillar
