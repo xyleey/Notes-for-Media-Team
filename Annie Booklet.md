@@ -80,6 +80,10 @@ wait for compiling the program (it has no output) --> Done
 </p>
 <p align="left">
 Thanks to @iawia for sharing this useful tool, it helped instead of the previous one "lulu".
+</p>
+<p align="left">
 Thanks to @loony175 for recommendation and offer a use guidance which plays as the foundation of my notes
+</p>
+<p align="left">
 *Annie Booklet Update 20180606
 </p>  
