@@ -140,7 +140,7 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
        口袋录播文件 -> 默认即可
        公演录播文件 -> 有时以默认模式下载会出现例如 "Application provided duration: 7980637472 / timestamp: 7994129672 is out of range for mov/mp4 format" 的错误，而使用concat_protocol就不会出现这样的问题
      ```
-- Batch mode (20180605 update)
+- Batch mode (20180606 update)
 
      `caterpillar manifest.txt` where the `manifest.txt` contains
      
@@ -238,7 +238,7 @@ Edit this configuration file first before you use it.
 ------------------------------------------------------------------ End ------------------------------------------------------------------
 </p>
 <p align="left">
-*Notes for Win10_x64 V2.5.md Update 20180605
+*Notes for Win10_x64 V2.5.md Update 20180606
 </p>  
    
 
