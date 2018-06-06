@@ -1,5 +1,7 @@
 
-New tool and notes for downloading highest quality videos from bilibili, youku and iqiyi under both windows & Ubuntu (linux)
+<h1 align="center"><img src="https://github.com/TeamSII/TeamSII.github.io/blob/master/image/NOTES%20copyright.png" width="500" height="400" alt="YESUNG"></h1>
+
+Valuable tool and notes for downloading highest quality videos from bilibili, youku and iqiyi under both windows & Ubuntu (linux)
 
 Source: https://github.com/iawia002/annie
 
@@ -74,3 +76,10 @@ wait for compiling the program (it has no output) --> Done
    
 Thanks to @iawia for sharing this useful tool, it helped instead of the previous one "lulu".
 Thanks to @loony175 for recommendation and offer a use guidance which plays as the foundation of my notes
+
+<p align="center">
+------------------------------------------------------------------ End ------------------------------------------------------------------
+</p>
+<p align="left">
+*Annie Booklet Update 20180606
+</p>  
