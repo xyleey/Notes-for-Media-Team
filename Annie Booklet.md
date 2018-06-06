@@ -74,12 +74,12 @@ wait for compiling the program (it has no output) --> Done
    
    * this may access 1080P with required cookies but still has not tested yet.
    
-Thanks to @iawia for sharing this useful tool, it helped instead of the previous one "lulu".
-Thanks to @loony175 for recommendation and offer a use guidance which plays as the foundation of my notes
 
 <p align="center">
 ------------------------------------------------------------------ End ------------------------------------------------------------------
 </p>
 <p align="left">
+Thanks to @iawia for sharing this useful tool, it helped instead of the previous one "lulu".
+Thanks to @loony175 for recommendation and offer a use guidance which plays as the foundation of my notes
 *Annie Booklet Update 20180606
 </p>  
