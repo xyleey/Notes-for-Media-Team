@@ -19,6 +19,10 @@ Source: https://github.com/iawia002/annie
   
 ## Install annie from github
 
+First, you need a Git.
+
+Download [`Git for Windows`](https://gitforwindows.org/)
+
 Open cmd.exe
 Run `go get github.com/iawia002/annie`
 wait for compiling the program (it has no output) --> Done
