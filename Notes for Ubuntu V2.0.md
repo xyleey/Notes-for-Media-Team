@@ -177,8 +177,11 @@ The path would be `$HOME/.config/kvm48/config.yml`
 - Text editors
    - `nano text`
    - `vi text`
-
-
+- sudo apt list --upgradable     # see all upgradable packages' information
+  sudo apt list --upgradable -a  # see all upgradable packages' version information
+  sudo apt update   # check upgrade but not upgrade
+  sudo apt upgrade  # upgrade installed packages
+  
 <p align="center">
 ------------------------------------------------------------------ End ------------------------------------------------------------------
 </p>
