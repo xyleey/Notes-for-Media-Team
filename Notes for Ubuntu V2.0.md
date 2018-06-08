@@ -52,8 +52,8 @@ You may refer [official package information](https://packages.ubuntu.com/search?
 - Artful (17.10) or later
 The FFmpeg in the official repository should be good enough.
 ```console
-sudo apt update
-sudo apt install ffmpeg
+$ sudo apt update
+$ sudo apt install ffmpeg
 ```
 
 - Zesty (17.04)
@@ -167,6 +167,7 @@ $ echo "export PATH=$PATH:$HOME/.local/bin"
 [KVM48](https://github.com/SNH48Live/KVM48), the Koudai48 VOD Manager. It is capable of downloading all streaming VODs of a set of monitored members in a specified date range. It collaborates with aria2 and caterpillar
 
 Install if you've installed python3-pip, `pip3 install KVM48`
+
         if you've installed python with pyenv,  `pip install KVM48
 	`
 Usage   `kvm48 -h`
