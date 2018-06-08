@@ -8,7 +8,6 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
 - [Ubuntu for Windows 10](#ubuntu-for-Windows-10)
 - [Tools](#tools)
   - [aria2](#aria2)
-  - [audio2video](#audio2video)
   - [ffmpeg](#ffmpeg)
   - [Python](#python)
   - [caterpillar-hls](#caterpillar-hls)
@@ -41,16 +40,6 @@ $ sudo apt install -y aria2
 $ aria2c -v   or   $ aria2c --version
 ```
 Usage `$ aria2c -h` or see examples on https://aria2.github.io/
-
-### audio2video
-[audio2video](https://github.com/fanaticscripter/multimedia-scripts) can combine an image and an audio into a video.
-This program bases on the [loop](https://github.com/fanaticscripter/multimedia-scripts/blob/master/audio2video) feature from ffmpeg.
-```console
-$ sudo add-apt-repository ppa:fanaticscripter/multimedia
-$ sudo apt-get update
-$ sudo apt install multimedia-scripts
-$ audio2video -h
-```
 
 ### ffmpeg
 [`ffmpeg`](http://ffmpeg.org/download.html) -> use `jonathonf/ffmpeg-3`.
