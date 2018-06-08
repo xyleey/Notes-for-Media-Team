@@ -1,19 +1,28 @@
 
-## Recommanded installation
+# audio2video
+[audio2video](https://github.com/fanaticscripter/multimedia-scripts) can combine an image and an audio into a video.
+This program bases on the [loop](https://github.com/fanaticscripter/multimedia-scripts/blob/master/audio2video) feature from ffmpeg.
 
+## Recommanded installation
+   
+   ```console
     $ sudo add-apt-repository ppa:fanaticscripter/multimedia
     $ sudo apt-get update
     $ sudo apt install multimedia-scripts
     $ audio2video -h
+    ```
     
 - [`https://launchpad.net/~fanaticscripter/+archive/ubuntu/multimedia`](https://launchpad.net/~fanaticscripter/+archive/ubuntu/multimedia)  
 - [`https://github.com/fanaticscripter/multimedia-scripts`](https://github.com/fanaticscripter/multimedia-scripts) 
   
 ## Update 20180605
 
-  * Add multimedia-scripts bionic 
+  * Add multimedia-scripts bionic i.e. bionic (18.04)
+    Therefore, while you install audio2video successfully, you have ffmpeg 3.4.2-2 too.
  
 ## Possible case
+
+Primarily the developer has already released the update build, which could avoid the appearance of the following situation:
 
 ```console
 $ sudo add-apt-repository ppa:fanaticscripter/multimedia
