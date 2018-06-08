@@ -208,6 +208,6 @@ The path would be `$HOME/.config/kvm48/config.yml`
 ------------------------------------------------------------------ End ------------------------------------------------------------------
 </p>
 <p align="left">
-*Notes for Notes for Ubuntu V2.0.md Update 20180606
+*Notes for Notes for Ubuntu V2.1.md Update 20180608
 </p>  
    
