@@ -29,6 +29,7 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
 * Default folder for Ubuntu in Win10 in my case:    
 `C:\Users\User\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\User
 	 history | more`
+* The Canonical regularly releases a new version of Ubuntu every 6 months. Hence you may see a package name follows by the version title, e.g. (18.04), which allows you to match your work needs.
 
 ## Tools
 
@@ -41,8 +42,26 @@ $ aria2c -v   or   $ aria2c --version
 ```
 Usage `$ aria2c -h` or see examples on https://aria2.github.io/
 
-### ffmpeg
-[`ffmpeg`](http://ffmpeg.org/download.html) -> use `jonathonf/ffmpeg-3`.
+### [`ffmpeg`](http://ffmpeg.org/download.html)
+
+In case of supporting the caterpillar in Ubuntu, you need to pick a suitable way to install ffmpeg. 
+
+Guidance see: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#ffmpeg
+You may refer [official package information](https://packages.ubuntu.com/search?keywords=ffmpeg&searchon=names&exact=1&suite=all&section=all) as well as you choose the correct method.
+
+- Artful (17.10) or later
+The FFmpeg in the official repository should be good enough.
+```console
+sudo apt update
+sudo apt install ffmpeg
+```
+
+- Zesty (17.04)
+Unfortunately, the FFmpeg in the official repository (3.2.4 at the moment) does not appear to work with caterpillar. However, Zesty reaches end of life in January 2018, so you should upgrade to Artful anyway.
+
+- LTS: Trusty (14.04) or Xenial (16.04)
+You may use the reputable `jonathonf/ffmpeg-3` PPA to install the latest FFmpeg on Trusty or Xenial.
+
 ```console
 $ sudo add-apt-repository ppa:jonathonf/ffmpeg-3
 $ sudo apt-get update
@@ -54,19 +73,24 @@ $ ffmpeg -version
 ```console
 $ sudo apt install software-properties-common
 ```
+!! Remind: Install properly ffmpeg in accordance with your Ubuntu version. 
+           For Ubuntu (18.04) you just run `sudo apt install ffmpeg` as the official repository or you may [install audio2video](https://github.com/TeamSII/Notes-for-Media-Team/blob/master/audio2video.md#recommanded-installation) instead.
 
 ### Python 
-- Python 3.6.0+ depends on Ubuntu release
+
+Python 3.6.0+ depends on Ubuntu release, subsequently to install 
+
+- [Artful (17.10) or later](https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#artful-1710-or-later-1)
+  Artful or later comes with Python 3.6+ right in the official repository.
+  
   ```console
   $ sudo apt update
   $ sudo apt install python3 python3-pip+
-  $ apt-cache show python3 | grep -i version
+  $ apt-cache show python3 | grep -i version  #(optional)
   ```	
-  *** Maybe you should download python 3.6.4 by pyenv (see [Install Python 3.6+ in Ubuntu by pyenv] below)
+  
+- [Zesty (17.04) or earlier with pyenv](https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#zesty-1704-or-earlier-with-pyenv)
 
-- [Install Python 3.6+ in Ubuntu by pyenv](https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#zesty-1704-or-earlier-with-pyenv)
-
-Guidance: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#zesty-1704-or-earlier-with-pyenv
 ```console
 $ sudo apt update 
 Follow the instruction on the pyenv wiki to install prerequisite packages with apt;
@@ -123,6 +147,8 @@ $ python3 --version
 ### caterpillar-hls
 [`caterpillar-hls`](https://github.com/zmwangx/caterpillar) 适用于下载hls下的VODs, i.e.`url.m3u8`
 ```console
+After you install a correct version of python (python 3.6.5 in this case), now you can install caterpillar
+
 $ pip3 install caterpillar-hls
   
 You need to add $HOME/.local/bin to your $PATH to use caterpillar
@@ -140,7 +166,9 @@ $ echo "export PATH=$PATH:$HOME/.local/bin"
 ### KVM48
 [KVM48](https://github.com/SNH48Live/KVM48), the Koudai48 VOD Manager. It is capable of downloading all streaming VODs of a set of monitored members in a specified date range. It collaborates with aria2 and caterpillar
 
-Install `pip install KVM48`
+Install if you've installed python3-pip, `pip3 install KVM48`
+        if you've installed python with pyenv,  `pip install KVM48
+	`
 Usage   `kvm48 -h`
 
 You need to edit YAML configuration file before you can use kvm48 `$ vi config.yml`.
