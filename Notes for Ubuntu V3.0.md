@@ -13,7 +13,7 @@ Please keep your CLU consistent with the version mentioned in the notes or, appl
   - [caterpillar-hls](#caterpillar-hls)
   - [KVM48](#kvm48)
 - [Extra Comments](#extra-comments)
-  - [Download youku videos](#download-youku-videos)(gist)
+  - [Download youku videos](#download-youku-videos) (gist)
   - [Linux command tips](#linux-command-tips) 
  
 ## Ubuntu for Windows 10
