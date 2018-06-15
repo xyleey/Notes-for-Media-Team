@@ -309,8 +309,9 @@ Merged into "电影鸭【曾志伟】【1080p】【粤语中字】.mp4".
 ```
 
 ### Linux command tips 
-- Switch in cmd.exe to bash `\...\directory path> bash`
-  Switch from bash to cmd: ctrl+D
+- Switch in cmd.exe to bash `\...\directory path> bash`     (regard as login)
+
+  Switch from bash to cmd: ctrl+D                           (regard as logout)
   
 - Change directory `cd /mnt/.../path`
 
