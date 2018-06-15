@@ -44,9 +44,9 @@ $ aria2c -v   or   $ aria2c --version
 ```
 Usage `$ aria2c -h` or see examples on https://aria2.github.io/
 
-### [`ffmpeg`](http://ffmpeg.org/download.html)
+### ffmpeg
 
-In case of supporting the caterpillar in Ubuntu, you need to pick a suitable way to install ffmpeg. 
+In case of supporting the caterpillar in Ubuntu, you need to pick a suitable way to install [`ffmpeg`](http://ffmpeg.org/download.html). 
 
 Guidance see: https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices#ffmpeg
 You may refer [official package information](https://packages.ubuntu.com/search?keywords=ffmpeg&searchon=names&exact=1&suite=all&section=all) as well as you choose the correct method.
@@ -200,7 +200,7 @@ Here I just simply describe the usage. If you are interested with the raw code, 
 
 ```console
 In a Linux terminal, run the following command from a fresh directory:
-curl ... | python3 -c "$(curl -s https://gist.githubusercontent.com/zmwangx/79f44ea27915a921b9b06e60043a9468/raw/process-youku-appinfo-jsonp)"
+$ curl ... | python3 -c "$(curl -s https://gist.githubusercontent.com/zmwangx/79f44ea27915a921b9b06e60043a9468/raw/process-youku-appinfo-jsonp)"
 ```
 
 where `curl ...` presents the command you copied in the previous step.
