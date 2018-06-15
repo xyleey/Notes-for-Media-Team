@@ -183,7 +183,7 @@ The path would be `$HOME/.config/kvm48/config.yml`
 
 ## Extra Comments
 
-### Download Youku Videos (Copyright remained by @zmwangx.)
+### Download Youku Videos
 
 Follow the instruction of features of `appinfo`, we are able to download a video from youku with the highest quality.
 
@@ -308,6 +308,10 @@ video:1378700kB audio:79228kB subtitle:0kB other streams:0kB global headers:0kB 
 Merged into "电影鸭【曾志伟】【1080p】【粤语中字】.mp4".
 ```
 
+ Many thanks to @zmwangx. 
+ 
+ Copyright all remained by @zmwangx.
+ 
 ### Linux command tips 
 - Switch in cmd.exe to bash `\...\directory path> bash`     (regard as login)
 
