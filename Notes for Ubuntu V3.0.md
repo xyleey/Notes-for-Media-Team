@@ -183,7 +183,7 @@ The path would be `$HOME/.config/kvm48/config.yml`
 
 ## Extra Comments
 
-### Download Youku Videos
+### Download Youku Videos (Copyright remained by @zmwangx.)
 
 Follow the instruction of features of `appinfo`, we are able to download a video from youku with the highest quality.
 
