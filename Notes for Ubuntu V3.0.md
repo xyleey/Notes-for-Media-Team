@@ -170,8 +170,8 @@ $ echo "export PATH=$PATH:$HOME/.local/bin"
 
 Install if you've installed python3-pip, `pip3 install KVM48`
 
-        if you've installed python with pyenv,  `pip install KVM48
-	`
+        if you've installed python with pyenv,  `pip install KVM48`
+	
 Usage   `kvm48 -h`
 
 You need to edit YAML configuration file before you can use kvm48 `$ vi config.yml`.
