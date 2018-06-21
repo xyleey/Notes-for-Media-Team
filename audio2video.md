@@ -10,7 +10,7 @@ This program bases on the [loop](https://github.com/fanaticscripter/multimedia-s
     $ sudo apt-get update
     $ sudo apt install multimedia-scripts
     $ audio2video -h
-    ```
+   ```
     
 - [`https://launchpad.net/~fanaticscripter/+archive/ubuntu/multimedia`](https://launchpad.net/~fanaticscripter/+archive/ubuntu/multimedia)  
 - [`https://github.com/fanaticscripter/multimedia-scripts`](https://github.com/fanaticscripter/multimedia-scripts) 
