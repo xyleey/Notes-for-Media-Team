@@ -189,7 +189,7 @@ Follow the instruction of features of `appinfo`, we are able to download a video
 
 Here I just simply describe the usage. If you are interested with the raw code, please click [here](https://gist.github.com/zmwangx/79f44ea27915a921b9b06e60043a9468#file-process-youku-appinfo-jsonp) switch to access the gist page.
 
-- First you need to endore you've got all tools it needs:
+- First you need to ensure you've got all tools it needs:
   python3 (see above)
   GNU parallel (`sudo apt install -y moreutils parallel`)
   ffmpeg (see above)
