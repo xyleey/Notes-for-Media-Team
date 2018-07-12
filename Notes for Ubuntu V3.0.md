@@ -5,7 +5,7 @@ These notes are positively tested as available on the platform of Ubuntu, a subs
 Please keep your CLU consistent with the version mentioned in the notes or, apply it in your special demand.
 
 ## Index
-- [Ubuntu for Windows 10](#ubuntu-for-Windows-10)
+- [Ubuntu for Windows 10](#ubuntu-for-windows-10)
 - [Tools](#tools)
   - [aria2](#aria2)
   - [ffmpeg](#ffmpeg)
