@@ -122,6 +122,19 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   
   `ffmpeg -i "1.mp4" -i "2.png" -filter_complex "overlay=10:1635" pix8.mp4`
 
+- 旋转画面
+
+  `ffmpeg -i input -vf "transpose=?" output`
+
+   For transpose=?, 
+   0 = 90 Counter Clockwise and Vertical Flip
+   1 = 90 Clockwise
+   2 = 90 Counter Clockwise
+   3 = 90 Clockwise and Vertical Flip
+
+   e.g. I need to turn the canvas of a video 180°, then I should use "transpose=2" twice: 
+        `ffmpeg -i input -vf "transpose=2,transpose=2" output`
+        
 ### caterpillar-hls 
 
   [`caterpillar-hls`](https://github.com/zmwangx/caterpillar) 适用于下载hls下的VODs, i.e.`url.m3u8`
