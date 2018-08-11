@@ -251,7 +251,7 @@ Edit this configuration file first before you use it.
 ------------------------------------------------------------------ End ------------------------------------------------------------------
 </p>
 <p align="left">
-*Notes for Win10_x64 V2.5.md Update 20180606
+*Notes for Win10_x64 V2.6.md Update 201800811
 </p>  
    
 
