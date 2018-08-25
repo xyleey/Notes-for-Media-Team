@@ -105,6 +105,10 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   - create "concat.txt" with [file inputname.ts/flv/etc] by column.
   
   - `ffmpeg -f concat -i "concat.txt" -c copy "output.ts"`
+  
+  or you may simply locate to your destination directory, and then run
+  
+  `ffmpeg -i concat:"file1.ts|file2.ts|file3.ts|file4.ts|file.. .ts" -c copy output.ts`
 
 - 抽取视频/音频流
   
