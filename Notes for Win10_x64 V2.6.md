@@ -134,7 +134,19 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
 
    e.g. I need to turn the canvas of a video 180°, then I should use "transpose=2" twice: 
         `ffmpeg -i input -vf "transpose=2,transpose=2" output`
-        
+- Two-Pass     
+     
+  Use [`Two-Pass`](https://trac.ffmpeg.org/wiki/Encode/H.264#twopass) if you are targeting a specific output file size, and if output quality from frame to frame is of less importance. For instance, if you need to resize a high-bitrate video to a specified bitrate level whilst you must take the peak bit rate into account, you may use:
+  
+  `ffmpeg -i input.mp4 -c:v libx264 -b:v 20M -maxrate 21M -bufsize 8M -pass 1 -f mp4 NUL && ffmpeg -i input.mp4 -c:v libx264 -b:v 20M -maxrate 21M -bufsize 8M -pass 2 -y output.mp4`
+  
+  or basically
+  
+  `ffmpeg -i input.mp4 -c:v libx264 -b:v 20M -maxrate 21M -bufsize 8M -pass 1 -f mp4 NUL && ^
+   ffmpeg -i input.mp4 -c:v libx264 -b:v 20M -maxrate 21M -bufsize 8M -pass 2 -y output.mp4`
+  
+where you are able to limit all the instantaneous bitrates under 21,000 kbps and obtain a 20,000 kbps average bitrate as well.
+
 ### caterpillar-hls 
 
   [`caterpillar-hls`](https://github.com/zmwangx/caterpillar) 适用于下载hls下的VODs, i.e.`url.m3u8`
