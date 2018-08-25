@@ -143,6 +143,7 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   or basically
   
   `ffmpeg -i input.mp4 -c:v libx264 -b:v 20M -maxrate 21M -bufsize 8M -pass 1 -f mp4 NUL && ^
+  
    ffmpeg -i input.mp4 -c:v libx264 -b:v 20M -maxrate 21M -bufsize 8M -pass 2 -y output.mp4`
   
 where you are able to limit all the instantaneous bitrates under 21,000 kbps and obtain a 20,000 kbps average bitrate as well.
