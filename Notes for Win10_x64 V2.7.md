@@ -263,7 +263,7 @@ Edit this configuration file first before you use it.
 ------------------------------------------------------------------ End ------------------------------------------------------------------
 </p>
 <p align="left">
-*Notes for Win10_x64 V2.6.md Update 201800811
+*Notes for Win10_x64 V2.7.md Update 201800825
 </p>  
    
 
