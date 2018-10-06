@@ -58,7 +58,7 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   - `youtube-dl -f 137+78 url` 下载特定视频137和音频78并合成
   - `youtube-dl -f xx -g url`  查找xx对应清晰度的源地址链接
 
-`you-get` 可用于下载斗鱼、b站、优酷等网站的视频，同时具有查看当前视频信息和寻找源地址的功能
+`you-get` 可用于下载斗鱼等网站的视频，同时具有查看当前视频信息和寻找源地址的功能
 - Usage: 
    - `you-get url`    直接下载当前网页中的内容，适用斗鱼直播录制
    - `you-get -l url` 同时下载b站多p视频
