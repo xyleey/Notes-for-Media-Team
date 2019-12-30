@@ -145,7 +145,9 @@ Install & Upgrade `pip install --upgrade youtube-dl you-get ykdl`
   `ffmpeg -i "20191129SNH48TeamSII六周年庆公演.mp4" -i test.png -filter_complex "overlay=10:25" -vcodec libx264 -pix_fmt yuv420p -acodec aac -b:v 1500k -b:a 320k -r 30 -f flv "$URL+$KEY"`
   
   该例已推流测试成功并且按照想要的位置将图片覆盖在视频上，从而达到在source画面上加logo的目的。
+  
   但上述命令重，图片本身尺寸、放置的位置相关命令仍需专业人士优化。推流视频属性的参数等需要按照自己的需求进行详细设定，或使用preset。
+  
   *此次测试以b站直播为例，推直播流时`-f flv "$URL+$KEY"`中目标地址格式为：“你的rtmp地址+你的直播码”，+表示二者直接连接，中间没有任何字符
         
 - Two-Pass     
